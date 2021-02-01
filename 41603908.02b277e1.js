@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[9],{79:function(e){e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"Welcome","permalink":"/voices-everywhere-cs147/blog/welcome"},{"title":"Hello","permalink":"/voices-everywhere-cs147/blog/hello-world"},{"title":"Hola","permalink":"/voices-everywhere-cs147/blog/hola"}]}')}}]);
