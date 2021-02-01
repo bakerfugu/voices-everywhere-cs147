@@ -5,35 +5,53 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './styles.module.css';
+import {
+  Typography,
+  Box,
+} from '@material-ui/core';
 
 const features = [
   {
-    title: 'Easy to Use',
-    imageUrl: 'img/undraw_docusaurus_mountain.svg',
+    title: 'Ayelet Drazen',
+    imageUrl: 'img/ayelet-face.png',
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        B.A. Political Science
+        <br/>
+        M.S. Computer Science
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    imageUrl: 'img/undraw_docusaurus_tree.svg',
+    title: 'Baker Sharp',
+    imageUrl: 'img/baker-face.png',
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        B.S. Computer Science
+        <br/>
+        Education Minor
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    imageUrl: 'img/undraw_docusaurus_react.svg',
+    title: 'Krishnan Nair',
+    imageUrl: 'img/krishnan-face.png',
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        B.S. Computer Science
+        <br/>
+        
+      </>
+    ),
+  },
+  {
+    title: 'Taylor Lallas',
+    imageUrl: 'img/taylor-face.png',
+    description: (
+      <>
+        B.A. Economics
+        <br/>
+        M.S. Computer Science
       </>
     ),
   },
@@ -42,13 +60,13 @@ const features = [
 function Feature({imageUrl, title, description}) {
   const imgUrl = useBaseUrl(imageUrl);
   return (
-    <div className={clsx('col col--4', styles.feature)}>
+    <div className={clsx('col col--3', styles.feature)}>
       {imgUrl && (
         <div className="text--center">
           <img className={styles.featureImage} src={imgUrl} alt={title} />
         </div>
       )}
-      <h3>{title}</h3>
+      <Typography variant="h5" component="h4" align="center" gutterBottom>{title}</Typography>
       <p>{description}</p>
     </div>
   );
@@ -78,6 +96,8 @@ function Home() {
         </div>
       </header>
       <main>
+        <Box height="5rem"/>
+        <Typography variant="h2" component="h2" align="center" gutterBottom>Our Team!</Typography>
         {features && features.length > 0 && (
           <section className={styles.features}>
             <div className="container">
@@ -89,6 +109,7 @@ function Home() {
             </div>
           </section>
         )}
+        <Box height="5rem"/>
       </main>
     </Layout>
   );
