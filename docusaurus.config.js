@@ -1,19 +1,19 @@
 module.exports = {
-  title: 'My Site',
-  tagline: 'The tagline of my site',
+  title: 'Voices Everywhere',
+  tagline: 'Hear locals\' stories, from exactly where they happened.',
   url: 'https://your-docusaurus-test-site.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  favicon: 'img/easter-island-illustration-vector.png',
+  organizationName: 'bakerfugu', // Usually your GitHub org/user name.
+  projectName: 'Voices Everywhere', // Usually your repo name.
   themeConfig: {
     navbar: {
-      title: 'My Site',
+      title: 'Voices Everywhere',
       logo: {
-        alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        alt: 'Voices Everywhere Logo',
+        src: 'img/easter-island-illustration-vector.png',
       },
       items: [
         {
@@ -24,8 +24,13 @@ module.exports = {
         },
         {to: 'blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/facebook/docusaurus',
-          label: 'GitHub',
+          href: 'http://cs147.stanford.edu/',
+          label: 'CS147',
+          position: 'right',
+        },
+        {
+          href: 'http://cs147.stanford.edu/',
+          label: 'Source',
           position: 'right',
         },
       ],
@@ -77,7 +82,7 @@ module.exports = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Made for the CS147 course at Stanford. Built with Docusaurus.`,
     },
   },
   presets: [
