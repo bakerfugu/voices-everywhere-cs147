@@ -8,7 +8,7 @@ Wite a description of our project here someday.
 
 ## CS147
 
-Write a description of CS147here at some point.
+Write a description of CS147 here at some point.
 
 ## Team Install and Setup
 

@@ -1,13 +1,13 @@
 module.exports = {
   title: 'Voices Everywhere',
   tagline: 'Hear locals\' stories, from exactly where they happened.',
-  url: 'https://your-docusaurus-test-site.com',
-  baseUrl: '/',
+  url: 'https://bakerfugu.github.io',
+  baseUrl: '/voices-everywhere-cs147/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/easter-island-illustration-vector.png',
   organizationName: 'bakerfugu', // Usually your GitHub org/user name.
-  projectName: 'Voices Everywhere', // Usually your repo name.
+  projectName: 'voices-everywhere-cs147', // Usually your repo name.
   themeConfig: {
     navbar: {
       title: 'Voices Everywhere',
