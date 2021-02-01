@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[13],{83:function(e){e.exports=JSON.parse('{"allTagsPath":"/voices-everywhere-cs147/blog/tags","slug":"facebook","name":"facebook","count":1,"permalink":"/voices-everywhere-cs147/blog/tags/facebook"}')}}]);
