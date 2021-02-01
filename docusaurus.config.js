@@ -22,14 +22,13 @@ module.exports = {
           label: 'Our Work',
           position: 'left',
         },
-        {to: 'blog', label: 'Blog', position: 'left'},
         {
           href: 'http://cs147.stanford.edu/',
           label: 'CS147',
           position: 'right',
         },
         {
-          href: 'http://cs147.stanford.edu/',
+          href: 'https://github.com/bakerfugu/voices-everywhere-cs147/',
           label: 'Source',
           position: 'right',
         },
@@ -39,32 +38,15 @@ module.exports = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Our Work',
           items: [
             {
-              label: 'Style Guide',
+              label: 'Overview',
               to: 'docs/',
             },
             {
-              label: 'Second Doc',
-              to: 'docs/doc2/',
-            },
-          ],
-        },
-        {
-          title: 'Community',
-          items: [
-            {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
+              label: 'Final Prototype',
+              to: 'docs/high-fidelity-prototype/',
             },
           ],
         },
@@ -72,12 +54,12 @@ module.exports = {
           title: 'More',
           items: [
             {
-              label: 'Blog',
-              to: 'blog',
+              label: 'CS147 Course Site',
+              href: 'http://cs147.stanford.edu/',
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              href: 'https://bakerfugu.github.io/voices-everywhere-cs147/',
             },
           ],
         },
@@ -91,15 +73,8 @@ module.exports = {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
           editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/',
-        },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/blog/',
+            'https://github.com/bakerfugu/voices-everywhere-cs147/tree/main/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
