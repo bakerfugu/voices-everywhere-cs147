@@ -20,7 +20,7 @@ This project uses `yarn` as a package manager (it's basically the same thing as 
 yarn --version
 ```
 
-Which should say `1.22.5` or later. If you have yarn version 2.0 this stuff may not work the same way, I haven't checked. So I'd recommend making sure you're on yarn 1.0 with version `1.22.5` or later. I can also help if you don't have yarn or have the wrong version.
+*If this says anything other than `1.22.5`, ask me about it. This is unlikely to be a problem, but I think it's the most likely thing to go wrong while setting this up assuming y'all have git working.*
 
 Next, install all the packages needed to run the website using this command:
 
@@ -35,6 +35,8 @@ yarn start
 ```
 
 This command will open up a browser window to the localhost website. Most changes are reflected live without having to restart the server or refresh the page.
+
+After making any changes, push them up to the repo and let me know so I can deploy them. (Also I will need to add y'all as collaborators to the git repo so let me know the first time before you do this so we don't have to deal with pull requests.)
 
 ## Deployment
 
