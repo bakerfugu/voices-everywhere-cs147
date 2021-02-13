@@ -3,6 +3,10 @@ module.exports = {
   tagline: 'Hear locals\' stories, from exactly where they happened.',
   url: 'https://bakerfugu.github.io',
   baseUrl: '/voices-everywhere-cs147/',
+  // For making stanford deployment
+  // $ GIT_USER=bakerfugu DEPLOYMENT_BRANCH=stanford yarn deploy
+  // url: 'http://web.stanford.edu',
+  // baseUrl: '/class/cs147/projects/ArtsandCulture/Voices/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/easter-island-illustration-vector.png',
