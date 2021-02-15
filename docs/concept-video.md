@@ -3,9 +3,9 @@ id: concept-video
 title: Concept Video
 ---
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/cvilv2km4kE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
 [Download Video](./assets/concept-video-compressed.mp4)
+
+<iframe width="640" height="360" src="https://www.youtube.com/embed/cvilv2km4kE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Tasks
 

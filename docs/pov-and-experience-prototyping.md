@@ -5,7 +5,7 @@ title: POVs & Experience Prototyping
 
 We interviewed eleven more people for our second round of needfinding and experience prototyping. 
 
-## POVs
+## POVs and HMWs
 
 ### Kawena and Marisa
 
