@@ -3,12 +3,47 @@ id: low-fi-prototype-and-test
 title: Low-Fi Prototype & Test
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac euismod odio, eu consequat dui. Nullam molestie consectetur risus id imperdiet. Proin sodales ornare turpis, non mollis massa ultricies id. Nam at nibh scelerisque, feugiat ante non, dapibus tortor. Vivamus volutpat diam quis tellus elementum bibendum. Praesent semper gravida velit quis aliquam. Etiam in cursus neque. Nam lectus ligula, malesuada et mauris a, bibendum faucibus mi. Phasellus ut interdum felis. Phasellus in odio pulvinar, porttitor urna eget, fringilla lectus. Aliquam sollicitudin est eros. Mauris consectetur quam vitae mauris interdum hendrerit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+## Presentation
 
-Duis et egestas libero, imperdiet faucibus ipsum. Sed posuere eget urna vel feugiat. Vivamus a arcu sagittis, fermentum urna dapibus, congue lectus. Fusce vulputate porttitor nisl, ac cursus elit volutpat vitae. Nullam vitae ipsum egestas, convallis quam non, porta nibh. Morbi gravida erat nec neque bibendum, eu pellentesque velit posuere. Fusce aliquam erat eu massa eleifend tristique.
+[Presentation PDF](./assets/Low-Fi-Protoype-Presentation.pdf)
 
-Sed consequat sollicitudin ipsum eget tempus. Integer a aliquet velit. In justo nibh, pellentesque non suscipit eget, gravida vel lacus. Donec odio ante, malesuada in massa quis, pharetra tristique ligula. Donec eros est, tristique eget finibus quis, semper non nisl. Vivamus et elit nec enim ornare placerat. Sed posuere odio a elit cursus sagittis.
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vS4NAJI6osZnsooTJId4jA413wpAUjr4-DZCwFNh63XvdwuxbiXcs0pcRNGgkCehYc737pRbBOLTXtY/embed?start=false&loop=false&delayms=60000" frameborder="0" width="640" height="360" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
-Phasellus feugiat purus eu tortor ultrices finibus. Ut libero nibh, lobortis et libero nec, dapibus posuere eros. Sed sagittis euismod justo at consectetur. Nulla finibus libero placerat, cursus sapien at, eleifend ligula. Vivamus elit nisl, hendrerit ac nibh eu, ultrices tempus dui. Nam tellus neque, commodo non rhoncus eu, gravida in risus. Nullam id iaculis tortor.
+## Report
 
-Nullam at odio in sem varius tempor sit amet vel lorem. Etiam eu hendrerit nisl. Fusce nibh mauris, vulputate sit amet ex vitae, congue rhoncus nisl. Sed eget tellus purus. Nullam tempus commodo erat ut tristique. Cras accumsan massa sit amet justo consequat eleifend. Integer scelerisque vitae tellus id consectetur.
+[Full Report PDF](./assets/Low-Fi-Prototyping-Report.pdf)
+
+### Results
+
+#### Overview
+
+Testing our low-fi prototype provided essential insights into the design and usability of our app. Throughout our prototype testing, our interviewees provided us with invaluable feedback on both the task flow and user experience as well as on our design and concept more generally. 
+
+#### Task Flow and User Experience
+
+All six users struggled with navigating between different screens due to the absence of a clearly visible “back” button
+Almost all users were confused as to how to explore stories remotely, citing the terminology of “explore remote stories” as ambiguous
+Many were confused by the “available as” audio and video icons
+Two of the users found the task flow of uploading a story to be confusing, especially given the ways in which the subtasks (entering information about the story, recording the story, and editing the story) were laid out
+
+#### Design and Concept
+
+* Users appreciated the map interface, and navigated it easily
+* Users wanted more clarity about the colors associated with stories
+* Some users did not grasp the concept of cultural immersion, confusing stories for Snapchat-esque stories
+* Users did not initially realize that stories are tied to physical locations, but once this was clarified, they loved the concept
+* Users liked audio as the main medium for stories, though several highlighted the benefit of transcription for accessibility and thought additional  pictures could bring stories to life
+* Users wanted to personalize playlists and see them in map-view
+* Users desired to see & scroll through all the stories at a given location
+Some expressed a want to share stories with friends 
+
+
+### Discussion
+
+Testing our low-fi prototype allowed us to unveil the key pain points with our current design. We found that the biggest challenges were: navigation within the app, clearly conveying the app’s concept to the user, ambiguous terminology, and confusing colors and icons. 
+
+To address the navigation problem, we will include a navigation menu at the bottom of the screen. In the navigation bar, we will employ clearer terminology. For example, we may change “explore remote stories” to “search for stories”. The navigation bar eliminates the need for a home screen, so the app will instead go straight to map view.
+
+To convey our concept more clearly, we may include a splash screen that will clearly articulate our value proposition—cultural immersion through personal stories. We hope that these changes, coupled with clear location tags for stories, will convey the central idea behind our app. 
+
+Throughout our interviews, users offered suggestions for how we could improve existing features within our map. The most notable among these suggestions were: the use of thematic groupings to allow individuals to explore related stories, increased flexibility in creating and visualizing playlists, and the ability to share stories with others. Overall, the feedback we received was highly encouraging and we are excited to incorporate these suggestions into our medium-fi prototype.
