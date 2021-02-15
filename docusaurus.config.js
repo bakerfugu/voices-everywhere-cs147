@@ -1,12 +1,12 @@
 module.exports = {
   title: 'Voices',
   tagline: 'Cultural immersion by discovering personal stories.',
-  // url: 'https://bakerfugu.github.io',
-  // baseUrl: '/voices-everywhere-cs147/',
+  url: 'https://bakerfugu.github.io',
+  baseUrl: '/voices-everywhere-cs147/',
   // For making stanford deployment
   // $ GIT_USER=bakerfugu DEPLOYMENT_BRANCH=stanford yarn deploy
-  url: 'http://web.stanford.edu',
-  baseUrl: '/class/cs147/projects/ArtsandCulture/Voices/',
+  // url: 'http://web.stanford.edu',
+  // baseUrl: '/class/cs147/projects/ArtsandCulture/Voices/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/easter-island-illustration-vector.png',
