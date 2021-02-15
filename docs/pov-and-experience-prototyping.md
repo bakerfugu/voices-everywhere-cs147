@@ -3,12 +3,45 @@ id: pov-and-experience-prototyping
 title: POVs & Experience Prototyping
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac euismod odio, eu consequat dui. Nullam molestie consectetur risus id imperdiet. Proin sodales ornare turpis, non mollis massa ultricies id. Nam at nibh scelerisque, feugiat ante non, dapibus tortor. Vivamus volutpat diam quis tellus elementum bibendum. Praesent semper gravida velit quis aliquam. Etiam in cursus neque. Nam lectus ligula, malesuada et mauris a, bibendum faucibus mi. Phasellus ut interdum felis. Phasellus in odio pulvinar, porttitor urna eget, fringilla lectus. Aliquam sollicitudin est eros. Mauris consectetur quam vitae mauris interdum hendrerit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+We interviewed eleven more people for our second round of needfinding and experience prototyping. 
 
-Duis et egestas libero, imperdiet faucibus ipsum. Sed posuere eget urna vel feugiat. Vivamus a arcu sagittis, fermentum urna dapibus, congue lectus. Fusce vulputate porttitor nisl, ac cursus elit volutpat vitae. Nullam vitae ipsum egestas, convallis quam non, porta nibh. Morbi gravida erat nec neque bibendum, eu pellentesque velit posuere. Fusce aliquam erat eu massa eleifend tristique.
+## POVs
 
-Sed consequat sollicitudin ipsum eget tempus. Integer a aliquet velit. In justo nibh, pellentesque non suscipit eget, gravida vel lacus. Donec odio ante, malesuada in massa quis, pharetra tristique ligula. Donec eros est, tristique eget finibus quis, semper non nisl. Vivamus et elit nec enim ornare placerat. Sed posuere odio a elit cursus sagittis.
+### Kawena and Marisa
 
-Phasellus feugiat purus eu tortor ultrices finibus. Ut libero nibh, lobortis et libero nec, dapibus posuere eros. Sed sagittis euismod justo at consectetur. Nulla finibus libero placerat, cursus sapien at, eleifend ligula. Vivamus elit nisl, hendrerit ac nibh eu, ultrices tempus dui. Nam tellus neque, commodo non rhoncus eu, gravida in risus. Nullam id iaculis tortor.
+* **We met Kawena**, a Hawaiian-Japanese hula dancer who is involved with the indigenous community, and **Marisa**, a Filipino-Chinese competitive hula dancer
+* **We were amazed to realize** they felt uncomfortable during some performances because they could be misinterpreted and exoticized by audience members.
+* **It would be game-changing** to help their audiences gain the culture context of the performance to fully understand the beauty of the performance. 
 
-Nullam at odio in sem varius tempor sit amet vel lorem. Etiam eu hendrerit nisl. Fusce nibh mauris, vulputate sit amet ex vitae, congue rhoncus nisl. Sed eget tellus purus. Nullam tempus commodo erat ut tristique. Cras accumsan massa sit amet justo consequat eleifend. Integer scelerisque vitae tellus id consectetur.
+:::tip HMW use cultural context to excite audience members?
+An interactive e-ticket with curated information 
+about the cultural and historical context of the performance 
+:::
+
+### Mitch
+
+* **We met Mitch**, a healthcare lawyer based in Dallas, Texas who was nervous to be randomly paired with a roommate at a retreat because of his sexual orientation.
+* **We were amazed to realize** that after Mitch immersed himself in his roommates culture during the retreat, he took the initiative to address diversity issues at his company.
+* **It would be game-changing** to allow people like Mitch to engage with people who inspire them to pursue positive endeavors with regards to diversity.
+
+:::tip HMW provide access to local experiences without directly asking questions?
+Associate physical locations and destinations with stories  
+**OR**  
+Learning through memes	
+:::
+
+### Sierra
+
+* **We met Sierra**, a white Stanford student from Utah who is working in Mexico City on her gap year
+* **We were amazed to realize** that she is hungry to learn about local cultures in Mexico, but feels like a burden when she asks too many questions of the people around her 
+* **It would be game-changing** to help her connect with local cultures in an authentic way without feeling like a pest
+
+:::tip HMW encourage conversations between people of different backgrounds?
+Ensure that you have to ask a question whenever you have to answer a question
+:::
+
+## Presentation
+
+[Presentation PDF](./assets/Assignment-2-Prototyping.pdf)
+
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSKZ1Y48CPC1z6i__WhkrksVQELiEe74JnfkQgiLajUwP2r4JXUlhMIHHd-aNvEuCpTUiUnxYPXCUG7/embed?start=false&loop=false&delayms=60000" frameborder="0" width="640" height="360" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
