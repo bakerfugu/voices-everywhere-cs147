@@ -9,6 +9,5 @@ module.exports = {
     'group-heuristic-evaluation',
     'high-fidelity-prototype',
     'poster-and-pitch-slide',
-    'doc1',
   ],
 };

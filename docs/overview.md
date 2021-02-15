@@ -4,15 +4,18 @@ title: Overview
 slug: /
 ---
 
-You can write JSX and use React components within your Markdown thanks to [MDX](https://mdxjs.com/).
+You can read about each step of our project by clicking the sections on the left.
 
-export const Highlight = ({children, color}) => ( <span style={{
-      backgroundColor: color,
-      borderRadius: '2px',
-      color: '#fff',
-      padding: '0.2rem',
-    }}>{children}</span> );
+### Final Prototype
 
-<Highlight color="#25c2a0">Docusaurus green</Highlight> and <Highlight color="#1877F2">Facebook blue</Highlight> are my favorite colors.
+Embed prototype (to be added)
 
-I can write **Markdown** alongside my _JSX_!
+Link to final prototype (will be added)
+
+### Final Presentation
+
+Embed Presentation (to be added)
+
+Link to final presentation PDF (will be added)
+
+
