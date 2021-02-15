@@ -1,6 +1,7 @@
 module.exports = {
   title: 'Voices',
   tagline: 'Cultural immersion by discovering personal stories.',
+  // GIT_USER=bakerfugu yarn deploy
   url: 'https://bakerfugu.github.io',
   baseUrl: '/voices-everywhere-cs147/',
   // For making stanford deployment
