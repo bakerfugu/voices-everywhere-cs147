@@ -1,6 +1,6 @@
 module.exports = {
-  title: 'Voices Everywhere',
-  tagline: 'Hear locals\' stories, from exactly where they happened.',
+  title: 'Voices',
+  tagline: 'Cultural immersion by discovering personal stories.',
   url: 'https://bakerfugu.github.io',
   baseUrl: '/voices-everywhere-cs147/',
   // For making stanford deployment
