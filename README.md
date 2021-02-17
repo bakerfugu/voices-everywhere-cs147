@@ -42,7 +42,9 @@ After making any changes, push them up to the repo and let me know so I can depl
 
 ### Deploy to Github Pages (fast, for quickly showing changes to team)
 
-Deploying to the github pages site is very quick. Make sure the github url options are uncommented in  `docusaurus.config.js`, and the Stanford options are commented out (see intrux on deploying to stanford for details). Then simply run:
+Deploying to the github pages site is very quick. Make sure the github `url` and `baseUrl` options are uncommented in  `docusaurus.config.js`, and the Stanford options are commented out, so it looks like this:
+
+Then run the deploy command (replacing `bakerfugu` with your github username):
 
 ```console
 GIT_USER=<Your GitHub username> USE_SSH=true yarn deploy
@@ -74,7 +76,7 @@ That command will take a moment, so while that's happening open another terminal
 ssh bakers@myth.stanford.edu
 ```
 
-Navigate to our team directory on the myth server::
+Type in your password, then navigate to our team directory on the myth server:
 
 ```console
 cd /afs/ir/class/cs147/WWW/projects/ArtsandCulture/Voices
