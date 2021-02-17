@@ -10,8 +10,8 @@ title: Concept Video
 ## Tasks
 
 *  **SIMPLE** - Listen to a story
-*  **MODERATE** - Find a new story
-*  **MODERATE** - Share your own story
+*  **MEDIUM** - Find a new story
+*  **COMPLEX** - Share your own story
 
 ## Presentation
 
