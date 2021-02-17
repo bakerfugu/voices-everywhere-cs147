@@ -44,6 +44,16 @@ After making any changes, push them up to the repo and let me know so I can depl
 
 Deploying to the github pages site is very quick. Make sure the github `url` and `baseUrl` options are uncommented in  `docusaurus.config.js`, and the Stanford options are commented out, so it looks like this:
 
+```javascript
+// Url options to deploy to github pages
+url: 'https://bakerfugu.github.io',
+baseUrl: '/voices-everywhere-cs147/',
+
+// Url options to deploy to stanford myth server
+// url: 'http://web.stanford.edu',
+// baseUrl: '/class/cs147/projects/ArtsandCulture/Voices/',
+```
+
 Then run the deploy command (replacing `bakerfugu` with your github username):
 
 ```console
