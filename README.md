@@ -40,11 +40,73 @@ After making any changes, push them up to the repo and let me know so I can depl
 
 ## Deployment
 
+### Deploy to Github Pages (fast, for quickly showing changes to team)
+
+Deploying to the github pages site is very quick. Make sure the github url options are uncommented in  `docusaurus.config.js`, and the Stanford options are commented out (see intrux on deploying to stanford for details). Then simply run:
+
 ```console
 GIT_USER=<Your GitHub username> USE_SSH=true yarn deploy
 ```
 
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+### Deploy to Stanford myth servers (slow, for publishing stuff when we're asked to)
+
+Deploying to the Stanford myth servers is a bit more complicated. First, we want push a build of the site to the "stanford" branch. To set this up, make sure the `url` and `baseUrl` options in `docusaurus.config.js` are set to the stanford ones, and the github pages options are commented out. It should look like this:
+
+```javascript
+// Url options to deploy to github pages
+// url: 'https://bakerfugu.github.io',
+// baseUrl: '/voices-everywhere-cs147/',
+
+// Url options to deploy to stanford myth server
+url: 'http://web.stanford.edu',
+baseUrl: '/class/cs147/projects/ArtsandCulture/Voices/',
+```
+
+Then run this terminal command (replace `bakerfugu` with your github username):
+
+```console
+GIT_USER=bakerfugu DEPLOYMENT_BRANCH=stanford yarn deploy
+```
+
+That command will take a moment, so while that's happening open another terminal window and login to the myth server (replace `bakers` with your SUNET):
+
+```console
+ssh bakers@myth.stanford.edu
+```
+
+Navigate to our team directory on the myth server::
+
+```console
+cd /afs/ir/class/cs147/WWW/projects/ArtsandCulture/Voices
+```
+
+If you type `ls` now, you should see a bunch of random files from when we built the website last time. Get rid of them (make sure you haven't moved from the directory above when you do this, deleting other people's stuff would be very bad):
+
+```console
+rm -r -d -v ./*
+```
+
+Our team directory should be empty now, so let's download the new build of the website. Make sure the `yarn deploy` from the other terminal window finished without throwing any errors. It's usually worth [checking the stanford branch](https://github.com/bakerfugu/voices-everywhere-cs147/tree/stanford) to see if all the files there are recent.
+
+```console
+wget https://github.com/bakerfugu/voices-everywhere-cs147/archive/stanford.zip
+```
+
+Once we have the zip downloaded, unzip it:
+
+```console
+unzip stanford.zip
+```
+
+The zip file makes a directory with all the build stuff in it, but we want all of that at the root level of our project folder, so move all the files inside of it one level up:
+
+```console
+mv DIRECTORY_NAME/* .
+```
+
+You should be done now. Check http://web.stanford.edu/class/cs147/projects/ArtsandCulture/Voices/ to see if the changes show up!
+
+## Misc
 
 This website is built using [Docusaurus 2](https://v2.docusaurus.io/), a modern static website generator.
 
