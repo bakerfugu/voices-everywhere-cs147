@@ -47,7 +47,7 @@ Deploying to the github pages site is very quick. Make sure the github `url` and
 Then run the deploy command (replacing `bakerfugu` with your github username):
 
 ```console
-GIT_USER=<Your GitHub username> USE_SSH=true yarn deploy
+GIT_USER=bakerfugu USE_SSH=true yarn deploy
 ```
 
 ### Deploy to Stanford myth servers (slow, for publishing stuff when we're asked to)
