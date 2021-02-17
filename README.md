@@ -95,7 +95,7 @@ cd /afs/ir/class/cs147/WWW/projects/ArtsandCulture/Voices
 If you type `ls` now, you should see a bunch of random files from when we built the website last time. Get rid of them (make sure you haven't moved from the directory above when you do this, deleting other people's stuff would be very bad):
 
 ```console
-rm -r -d -v ./*
+rm -r -d -v -f ./*
 ```
 
 Our team directory should be empty now, so let's download the new build of the website. Make sure the `yarn deploy` from the other terminal window finished without throwing any errors. It's usually worth [checking the stanford branch](https://github.com/bakerfugu/voices-everywhere-cs147/tree/stanford) to see if all the files there are recent.
