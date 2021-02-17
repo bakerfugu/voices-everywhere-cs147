@@ -57,7 +57,7 @@ baseUrl: '/voices-everywhere-cs147/',
 Then run the deploy command (replacing `bakerfugu` with your github username):
 
 ```console
-GIT_USER=bakerfugu USE_SSH=true yarn deploy
+GIT_USER=bakerfugu yarn deploy
 ```
 
 ### Deploy to Stanford myth servers (slow, for publishing stuff when we're asked to)
