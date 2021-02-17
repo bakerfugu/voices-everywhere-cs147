@@ -3,9 +3,17 @@ id: low-fi-prototype-and-test
 title: Low-Fi Prototype & Test
 ---
 
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
 ## Presentation
 
-[Presentation PDF](./assets/Low-Fi-Protoype-Presentation.pdf)
+<a
+  target="_blank"
+  href={useBaseUrl("assets/Low-Fi-Protoype-Presentation.pdf")}>
+
+  Presentation PDF
+
+</a>
 
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vS4NAJI6osZnsooTJId4jA413wpAUjr4-DZCwFNh63XvdwuxbiXcs0pcRNGgkCehYc737pRbBOLTXtY/embed?start=false&loop=false&delayms=60000" frameborder="0" width="640" height="360" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
@@ -17,7 +25,13 @@ title: Low-Fi Prototype & Test
 
 ## Report
 
-[Full Report PDF](./assets/Low-Fi-Prototyping-Report.pdf)
+<a
+  target="_blank"
+  href={useBaseUrl("assets/Low-Fi-Prototyping-Report.pdf")}>
+
+  Full Report PDF
+
+</a>
 
 ### Results
 
