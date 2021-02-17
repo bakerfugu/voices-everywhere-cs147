@@ -3,6 +3,8 @@ id: needfinding
 title: Needfinding
 ---
 
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
 We interviewed nine people over our week of needfinding. We found three things from our interviews
 
 * Everyone wants to have a connection to the art they consume and interact with. 
@@ -11,7 +13,13 @@ We interviewed nine people over our week of needfinding. We found three things f
 
 ## Presentation
 
-[Presentation PDF](./assets/Needfinding-Presentation.pdf)
+<a
+  target="_blank"
+  href={useBaseUrl("assets/Needfinding-Presentation.pdf")}>
+
+  Presentation PDF
+
+</a>
 
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSFZ-Bbo51DCxwaYvyaR5cs9vYJ899ftWpomf6KkOhsACTS7Zo3R7xGmz3NSJ3TK1WYf8t5S_exNgNZ/embed?start=false&loop=false&delayms=60000" frameborder="0" width="640" height="360" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
