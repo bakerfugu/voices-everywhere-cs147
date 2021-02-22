@@ -12,8 +12,8 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 <a
   target="_blank"
-  href={useBaseUrl("assets/Med-Fi-Prototype.pdf")}>
+  href={useBaseUrl("assets/Med-Fi0Prototype.pdf")}>
 
-  Full Report PDF
+  Slides
 
 </a>
