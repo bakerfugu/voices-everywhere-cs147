@@ -7,13 +7,14 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 ## Links
 
-[Invision Link](https://www.figma.com/proto/d1azqt8OHaDjVIs11hnwG9/Full-Medium-Fi-Prototype?scaling=scale-down&node-id=87%3A4201)
+[Figma Link](https://www.figma.com/proto/d1azqt8OHaDjVIs11hnwG9/Full-Medium-Fi-Prototype?scaling=scale-down&node-id=88%3A9695)
 
 
 <a
   target="_blank"
-  href={useBaseUrl("assets/Med-Fi0Prototype.pdf")}>
+  href={useBaseUrl("assets/Med-Fi-Prototype.pdf")}>
 
   Slides
 
 </a>
+
