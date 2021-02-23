@@ -48,7 +48,7 @@ Make sure you can find each of these "pages":
   target="_blank"
   href={useBaseUrl("assets/Med-Fi-Prototype.pdf")}>
 
-  Medium-Fi Prototype Slides Hi
+  Medium-Fi Prototype Slides
 
 </a>
 
