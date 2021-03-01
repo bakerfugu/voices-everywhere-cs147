@@ -1,6 +1,5 @@
 import React, { useRef } from 'react';
 import clsx from 'clsx';
-import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
@@ -85,6 +84,7 @@ function Home() {
   const {siteConfig = {}} = context;
 
   const topGradientRef = useRef();
+  const firstTransitionRange = [0, 300]
 
   return (
     <main>
@@ -96,64 +96,68 @@ function Home() {
           className={styles.bgYellowGradient}
         />
       </FadeBox> */}
-      <FadeBox
-        childRef={topGradientRef}
+      <div
+        className={styles.backgroundContainer}
       >
-        <img
-          ref={topGradientRef}
-          src="https://images.unsplash.com/photo-1557682224-5b8590cd9ec5?ixlib=rb-1.2.1&w=1000&q=80"
-          className={styles.bgImg}
-        />
-      </FadeBox>
-      <Box height="15rem"/>
-      <ParallaxBox 
-        triggerPoint={0} 
-        yOffset={200}
-        easing={[0.33, 1, 0.68, 1]}
+        <FadeBox
+          childRef={topGradientRef}
+          scrollInputRange={firstTransitionRange}
+          opacityOutputRange={[0.2, 0.8]}
+        >
+          <img
+            ref={topGradientRef}
+            src={useBaseUrl("img/Maps-Big-Screenshot-ColorFaded.png")}
+            className={styles.bgImg}
+          />
+        </FadeBox>
+      </div>
+      <div
+        className={styles.contentContainer}
       >
-        <div className={styles.heroBanner}>
-          <Typography variant="h1" component="h1" align="center" gutterBottom>{siteConfig.title}</Typography>
-          <p className="hero__subtitle">{siteConfig.tagline}</p>
-        </div>
-      </ParallaxBox>
-      <Box height="20rem"/>
-      <Typography variant="h2" component="h2" align="center" gutterBottom>ABC!</Typography>
-      <Box height="5rem"/>
-      {/* <motion.img
-        ref={ref}
-        className={styles.bgImg}
-        src="https://images.unsplash.com/photo-1557682224-5b8590cd9ec5?ixlib=rb-1.2.1&w=1000&q=80"
-        alt="gradient"
-        style={{ opacity, top: "50%" }}
-      /> */}
-      <Typography variant="h2" component="h2" align="center" gutterBottom>ABC!</Typography>
-      <Box height="5rem"/>
-      <Typography variant="h2" component="h2" align="center" gutterBottom>ABC!</Typography>
-      <Box height="5rem"/>
-      <IntersectionObserver>
-        <ScaleBox>
-          <Typography variant="h2" component="h2" align="center" gutterBottom>Our Team!</Typography>
-        </ScaleBox>
-      </IntersectionObserver>
-      <IntersectionObserver>
-        {features && features.length > 0 && (
-          <ScaleBox>
-            <section className={styles.features}>
-              <div className="container">
-                <div className="row">
-                  {features.map((props, idx) => (
-                    <Feature key={idx} {...props} />
-                  ))}
-                </div>
-              </div>
-            </section>
-          </ScaleBox>
-        )}
-      </IntersectionObserver>
-      <Typography variant="h2" component="h2" align="center" gutterBottom>ABC!</Typography>
-      <Box height="5rem"/>
-      <Typography variant="h2" component="h2" align="center" gutterBottom>ABC!</Typography>
-      <Box height="5rem"/>
+        <Box height="15rem"/>
+        <ParallaxBox 
+          yRange={firstTransitionRange}
+          easing={[0.5, 0, 0.75, 0]}
+        >
+          <div className={styles.heroBanner}>
+            <Typography variant="h1" component="h1" align="center" gutterBottom>{siteConfig.title}</Typography>
+            <p className="hero__subtitle">{siteConfig.tagline}</p>
+          </div>
+        </ParallaxBox>
+        <Box height="20rem"/>
+        <Typography variant="h2" component="h2" align="center" gutterBottom>ABC!</Typography>
+        <Box height="5rem"/>
+        <Typography variant="h2" component="h2" align="center" gutterBottom>ABC!</Typography>
+        <Box height="5rem"/>
+        <Typography variant="h2" component="h2" align="center" gutterBottom>ABC!</Typography>
+        <Box height="5rem"/>
+        <Box>
+          <IntersectionObserver>
+            <ScaleBox>
+              <Typography variant="h2" component="h2" align="center" gutterBottom>Our Team!</Typography>
+            </ScaleBox>
+          </IntersectionObserver>
+          <IntersectionObserver>
+            {features && features.length > 0 && (
+              <ScaleBox>
+                <section className={styles.features}>
+                  <div className="container">
+                    <div className="row">
+                      {features.map((props, idx) => (
+                        <Feature key={idx} {...props} />
+                      ))}
+                    </div>
+                  </div>
+                </section>
+              </ScaleBox>
+            )}
+          </IntersectionObserver>
+        </Box>
+        <Typography variant="h2" component="h2" align="center" gutterBottom>ABC!</Typography>
+        <Box height="5rem"/>
+        <Typography variant="h2" component="h2" align="center" gutterBottom>ABC!</Typography>
+        <Box height="5rem"/>
+      </div>
     </main>
   );
 }

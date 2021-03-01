@@ -3,13 +3,8 @@ import { useViewportScroll, useTransform, motion } from "framer-motion";
 
 export const ParallaxBox = ({
   children,
-  yOffset = 100, // number > 0
+  yRange = [0, 200],
   easing = [0.42, 0, 0.58, 1],
-  // easing = "easeInOut", // [number, number, number, number] | "linear" | "easeIn" |
-  //"easeOut" | "easeInOut" | "circIn" | "circOut" | "circInOut" | "backIn" | "backOut" |
-  //"backInOut" | "anticipate" | EasingFunction;
-  triggerPoint = 0.1, // value between 0 and 1 (top and bottom of the window), point to start animation
-  fadeOut = false, // true | false fade an element out on end of the animation
   ...rest
 }) => {
   const { scrollY } = useViewportScroll();
@@ -35,35 +30,21 @@ export const ParallaxBox = ({
       document.removeEventListener("load", setValues);
       window.removeEventListener("resize", setValues);
     };
-  }, [ref, yOffset]);
+  }, [ref]);
 
   // const transformInitialValue =
   //   elementTop - window.innerHeight <= 0 ? 0 : elementTop - window.innerHeight;
-  const transformInitialValue = elementTop - clientHeight * triggerPoint;
-  const transformFinalValue = elementTop + yOffset;
+  // const transformInitialValue = elementTop - clientHeight * triggerPoint;
+  // const transformFinalValue = elementTop + yOffset;
 
-  const yRange = [transformInitialValue, transformFinalValue];
+  // const yRange = [transformInitialValue, transformFinalValue];
 
-  const y = useTransform(scrollY, yRange, [0, -yOffset], easing);
-
-  const opacityInitialValue = fadeOut ? 0 : 1;
-  const opacityRange = useMemo(() => [opacityInitialValue, 1], [
-    opacityInitialValue
-  ]);
-
-  // const yOpacityRange = [transformInitialValue, transformFinalValue];
-  const yOpacityRange = [elementBottom, transformFinalValue - yOffset];
-  const opacity = useTransform(
-    scrollY,
-    yOpacityRange,
-    opacityRange,
-    "anticipate"
-  );
+  const y = useTransform(scrollY, yRange, [0, -elementBottom], easing);
 
   console.log('scrollY', scrollY)
 
   return (
-    <motion.div ref={ref} initial={{ y: 0 }} style={{ y, opacity }} {...rest}>
+    <motion.div ref={ref} initial={{ y: 0 }} style={{ y }} {...rest}>
       {children}
     </motion.div>
   );
