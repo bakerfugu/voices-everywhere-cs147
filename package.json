@@ -19,7 +19,8 @@
     "clsx": "^1.1.1",
     "framer-motion": "^3.3.0",
     "react": "^16.8.4",
-    "react-dom": "^16.8.4"
+    "react-dom": "^16.8.4",
+    "react-use": "^17.1.1"
   },
   "browserslist": {
     "production": [

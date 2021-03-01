@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import clsx from 'clsx';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
@@ -9,6 +9,14 @@ import {
   Typography,
   Box,
 } from '@material-ui/core';
+// import { useViewportScroll, useTransform, useSpring, motion } from "framer-motion";
+
+import {
+  ParallaxBox,
+  IntersectionObserver,
+  ScaleBox,
+  FadeBox,
+} from '../components'
 
 const features = [
   {
@@ -75,53 +83,78 @@ function Feature({imageUrl, title, description}) {
 function Home() {
   const context = useDocusaurusContext();
   const {siteConfig = {}} = context;
+
+  const topGradientRef = useRef();
+
   return (
-    <Layout
-      title={`${siteConfig.title}`}
-      description="Voices Everywhere CS147 Website">
-      <header className={clsx('hero hero--primary', styles.heroBanner)}>
-        <div className="container">
-          <h1 className="hero__title">{siteConfig.title}</h1>
+    <main>
+      {/* <FadeBox
+        childRef={topGradientRef}
+      >
+        <div
+          ref={topGradientRef}
+          className={styles.bgYellowGradient}
+        />
+      </FadeBox> */}
+      <FadeBox
+        childRef={topGradientRef}
+      >
+        <img
+          ref={topGradientRef}
+          src="https://images.unsplash.com/photo-1557682224-5b8590cd9ec5?ixlib=rb-1.2.1&w=1000&q=80"
+          className={styles.bgImg}
+        />
+      </FadeBox>
+      <Box height="15rem"/>
+      <ParallaxBox 
+        triggerPoint={0} 
+        yOffset={200}
+        easing={[0.33, 1, 0.68, 1]}
+      >
+        <div className={styles.heroBanner}>
+          <Typography variant="h1" component="h1" align="center" gutterBottom>{siteConfig.title}</Typography>
           <p className="hero__subtitle">{siteConfig.tagline}</p>
-          {/* <div className={styles.buttons}>
-            <Link
-              className={clsx(
-                'button button--outline button--secondary button--lg',
-                styles.getStarted,
-              )}
-              to={useBaseUrl('docs/')}>
-              Concept Video
-            </Link>
-          </div> */}
-          {/* Not sure why this className isn't being picked up by the CSS module... */}
-          <div className={styles.iframeContainer}>
-            <iframe 
-              className={styles.responsiveIframe}
-              src="https://www.youtube.com/embed/cvilv2km4kE" 
-              frameborder="0" 
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-              allowfullscreen
-            ></iframe>
-          </div>
         </div>
-      </header>
-      <main>
-        <Box height="5rem"/>
-        <Typography variant="h2" component="h2" align="center" gutterBottom>Our Team!</Typography>
+      </ParallaxBox>
+      <Box height="20rem"/>
+      <Typography variant="h2" component="h2" align="center" gutterBottom>ABC!</Typography>
+      <Box height="5rem"/>
+      {/* <motion.img
+        ref={ref}
+        className={styles.bgImg}
+        src="https://images.unsplash.com/photo-1557682224-5b8590cd9ec5?ixlib=rb-1.2.1&w=1000&q=80"
+        alt="gradient"
+        style={{ opacity, top: "50%" }}
+      /> */}
+      <Typography variant="h2" component="h2" align="center" gutterBottom>ABC!</Typography>
+      <Box height="5rem"/>
+      <Typography variant="h2" component="h2" align="center" gutterBottom>ABC!</Typography>
+      <Box height="5rem"/>
+      <IntersectionObserver>
+        <ScaleBox>
+          <Typography variant="h2" component="h2" align="center" gutterBottom>Our Team!</Typography>
+        </ScaleBox>
+      </IntersectionObserver>
+      <IntersectionObserver>
         {features && features.length > 0 && (
-          <section className={styles.features}>
-            <div className="container">
-              <div className="row">
-                {features.map((props, idx) => (
-                  <Feature key={idx} {...props} />
-                ))}
+          <ScaleBox>
+            <section className={styles.features}>
+              <div className="container">
+                <div className="row">
+                  {features.map((props, idx) => (
+                    <Feature key={idx} {...props} />
+                  ))}
+                </div>
               </div>
-            </div>
-          </section>
+            </section>
+          </ScaleBox>
         )}
-        <Box height="5rem"/>
-      </main>
-    </Layout>
+      </IntersectionObserver>
+      <Typography variant="h2" component="h2" align="center" gutterBottom>ABC!</Typography>
+      <Box height="5rem"/>
+      <Typography variant="h2" component="h2" align="center" gutterBottom>ABC!</Typography>
+      <Box height="5rem"/>
+    </main>
   );
 }
 
