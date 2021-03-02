@@ -143,9 +143,10 @@ function Feature({imageUrl, title, description, delay, linkTo}) {
 function Home() {
   const context = useDocusaurusContext();
   const {siteConfig = {}} = context;
-
   const topGradientRef = useRef();
-  const firstTransitionRange = [0, window.innerHeight/3]
+
+  const windowHeight = (window && window.innerHeight) || 900;
+  const firstTransitionRange = [0, windowHeight/3]
 
   return (
     <main>
@@ -164,7 +165,7 @@ function Home() {
         </FadeBox>
         <FadeBox
           childRef={topGradientRef}
-          scrollInputRange={[...firstTransitionRange, window.innerHeight+400,window.innerHeight+600]}
+          scrollInputRange={[...firstTransitionRange, windowHeight+400,windowHeight+600]}
           opacityOutputRange={[0.2, 0.8, 0.8, 0]}
         >
           <img
@@ -178,7 +179,7 @@ function Home() {
         className={styles.contentContainer}
       >
         <Box 
-          height={`${window.innerHeight}px`}
+          height={`${windowHeight}px`}
           className={styles.heroContainer}
         >
           <ParallaxBox 
