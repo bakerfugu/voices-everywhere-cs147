@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
@@ -145,7 +145,13 @@ function Home() {
   const {siteConfig = {}} = context;
   const topGradientRef = useRef();
 
-  const windowHeight = (window && window.innerHeight) || 900;
+  const [windowHeight, setWindowHeight] = useState(900)
+
+  useEffect(() => {
+    const changeWindowHeight = window ? window.innerHeight : 900;
+    setWindowHeight(changeWindowHeight)
+  }, [])
+
   const firstTransitionRange = [0, windowHeight/3]
 
   return (

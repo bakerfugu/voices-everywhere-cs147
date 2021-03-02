@@ -30,7 +30,7 @@ export const FadeBox = ({
   const yRange = useTransform(scrollY, scrollInputRange || [childHeight - offsetHeight, 0], opacityOutputRange);
   const opacity = useSpring(yRange, { stiffness: 400, damping: 40 });
 
-  console.log('scrollY', scrollY)
+  // console.log('scrollY', scrollY)
 
   return (
     <motion.div

@@ -41,7 +41,7 @@ export const ParallaxBox = ({
 
   const y = useTransform(scrollY, yRange, [0, -elementBottom], easing);
 
-  console.log('scrollY', scrollY)
+  // console.log('scrollY', scrollY)
 
   return (
     <motion.div ref={ref} initial={{ y: 0 }} style={{ y }} {...rest}>
