@@ -5,8 +5,13 @@
  * and scoped locally.
  */
 
+.heroContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .heroBanner {
-  padding: 4rem 0;
   text-align: center;
   position: relative;
   overflow: hidden;
