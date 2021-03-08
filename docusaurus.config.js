@@ -10,15 +10,19 @@ module.exports = {
   // baseUrl: '/class/cs147/projects/ArtsandCulture/Voices/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/easter-island-illustration-vector.png',
+  favicon: 'img/favicon.svg',
   organizationName: 'bakerfugu', // Usually your GitHub org/user name.
   projectName: 'voices-everywhere-cs147', // Usually your repo name.
   themeConfig: {
+    colorMode: {
+      defaultMode: 'light',
+      disableSwitch: true,
+    },
     navbar: {
-      title: 'Voices Everywhere',
+      title: 'voices',
       logo: {
         alt: 'Voices Everywhere Logo',
-        src: 'img/easter-island-illustration-vector.png',
+        src: 'img/favicon.svg',
       },
       items: [
         {
