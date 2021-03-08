@@ -142,15 +142,15 @@ function Feature({imageUrl, title, description, delay, linkTo, presentationGoogl
             {featureContents}
           </ScaleBox>
         : linkTo ? 
-          <Link to={linkTo}>
             <Card>
+            <Link to={linkTo}>
               <CardHeader
                 title={title}
                 titleTypographyProps={{align: "center"}}
               />
+              </Link>
+              <a href={presentationGoogleLink}>{presentationGoogle}</a>
             </Card>
-            <a href={presentationGoogleLink}>{presentationGoogle}</a>
-          </Link>
         :
         {featureContents}
       }
