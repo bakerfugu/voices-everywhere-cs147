@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>http://web.stanford.edu/blog</id>
+    <id>https://bakerfugu.github.io/blog</id>
     <title>Voices Blog</title>
     <updated>2015-10-25T23:29:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="http://web.stanford.edu/blog"/>
+    <link rel="alternate" href="https://bakerfugu.github.io/blog"/>
     <subtitle>Voices Blog</subtitle>
-    <icon>http://web.stanford.edu/img/easter-island-illustration-vector.png</icon>
+    <icon>https://bakerfugu.github.io/img/favicon.svg</icon>
 </feed>
