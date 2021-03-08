@@ -69,41 +69,58 @@ const features = [
 const assignmentLinksFirstRow = [
   {
     title: 'Needfinding',
-    linkTo: '/docs/needfinding'
+    linkTo: '/docs/needfinding',
+    presentationGoogle: 'Needfinding Slides',
+    presentationGoogleLink: "https://docs.google.com/presentation/d/e/2PACX-1vSFZ-Bbo51DCxwaYvyaR5cs9vYJ899ftWpomf6KkOhsACTS7Zo3R7xGmz3NSJ3TK1WYf8t5S_exNgNZ/embed?start=false&loop=false&delayms=60000",
   },
   {
     title: 'POVs & Prototyping',
-    linkTo: '/docs/pov-and-experience-prototyping'
+    linkTo: '/docs/pov-and-experience-prototyping',
+    presentationGoogle: 'Experience Prototyping Slides',
+    presentationGoogleLink: "https://docs.google.com/presentation/d/e/2PACX-1vSFZ-Bbo51DCxwaYvyaR5cs9vYJ899ftWpomf6KkOhsACTS7Zo3R7xGmz3NSJ3TK1WYf8t5S_exNgNZ/embed?start=false&loop=false&delayms=60000",
   },
   {
     title: 'Concept Video',
-    linkTo: '/docs/concept-video'
+    linkTo: '/docs/concept-video',
+    presentationGoogle: 'Concept Video Slides',
+    presentationGoogleLink: 'https://docs.google.com/presentation/d/e/2PACX-1vSFZ-Bbo51DCxwaYvyaR5cs9vYJ899ftWpomf6KkOhsACTS7Zo3R7xGmz3NSJ3TK1WYf8t5S_exNgNZ/embed?start=false&loop=false&delayms=60000',
   },
   {
     title: 'Low-fi Prototype',
-    linkTo: '/docs/low-fi-prototype-and-test'
+    linkTo: '/docs/low-fi-prototype-and-test',
+    presentationGoogle: 'Low-Fi Prototype Slides)',
+    presentationGoogleLink: "https://docs.google.com/presentation/d/e/2PACX-1vSFZ-Bbo51DCxwaYvyaR5cs9vYJ899ftWpomf6KkOhsACTS7Zo3R7xGmz3NSJ3TK1WYf8t5S_exNgNZ/embed?start=false&loop=false&delayms=60000",
   },
 ];
 const assignmentLinksSecondRow = [
   {
     title: 'Med-fi Prototype',
-    linkTo: '/docs/medium-fi-prototype'
+    linkTo: '/docs/medium-fi-prototype',
+    presentationGoogle: 'Med-Fi Prototype Slides',
+    presentationGoogleLink: "https://docs.google.com/presentation/d/e/2PACX-1vSFZ-Bbo51DCxwaYvyaR5cs9vYJ899ftWpomf6KkOhsACTS7Zo3R7xGmz3NSJ3TK1WYf8t5S_exNgNZ/embed?start=false&loop=false&delayms=60000",
   },
   {
     title: 'Group HE',
-    linkTo: '/docs/group-heuristic-evaluation'
+    linkTo: '/docs/group-heuristic-evaluation',
+    presentationGoogle: 'Presentation (Google Docs)',
+    presentationGoogleLink: "https://docs.google.com/presentation/d/e/2PACX-1vSFZ-Bbo51DCxwaYvyaR5cs9vYJ899ftWpomf6KkOhsACTS7Zo3R7xGmz3NSJ3TK1WYf8t5S_exNgNZ/embed?start=false&loop=false&delayms=60000",
   },
   {
     title: 'Final Prototype',
-    linkTo: '/docs/high-fidelity-prototype'
+    linkTo: '/docs/high-fidelity-prototype',
+    presentationGoogle: 'Presentation (Google Docs)',
+    presentationGoogleLink: "https://docs.google.com/presentation/d/e/2PACX-1vSFZ-Bbo51DCxwaYvyaR5cs9vYJ899ftWpomf6KkOhsACTS7Zo3R7xGmz3NSJ3TK1WYf8t5S_exNgNZ/embed?start=false&loop=false&delayms=60000",
   },
   {
     title: 'Poster & Pitch',
-    linkTo: '/docs/poster-and-pitch-slide'
+    linkTo: '/docs/poster-and-pitch-slide',
+    presentationGoogle: 'Presentation (Google Docs)',
+    presentationGoogleLink: "https://docs.google.com/presentation/d/e/2PACX-1vSFZ-Bbo51DCxwaYvyaR5cs9vYJ899ftWpomf6KkOhsACTS7Zo3R7xGmz3NSJ3TK1WYf8t5S_exNgNZ/embed?start=false&loop=false&delayms=60000",
   },
 ];
 
-function Feature({imageUrl, title, description, delay, linkTo}) {
+
+function Feature({imageUrl, title, description, delay, linkTo, presentationGoogle, presentationGoogleLink}) {
   const imgUrl = useBaseUrl(imageUrl);
   const featureContents = (
     <div>
@@ -132,6 +149,7 @@ function Feature({imageUrl, title, description, delay, linkTo}) {
                 titleTypographyProps={{align: "center"}}
               />
             </Card>
+            <a href={presentationGoogleLink}>{presentationGoogle}</a>
           </Link>
         :
         {featureContents}
