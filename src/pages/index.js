@@ -3,6 +3,7 @@ import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import Layout from '@theme/Layout';
 import styles from './styles.module.css';
 import {
   Typography,
@@ -10,7 +11,6 @@ import {
   Card,
   CardHeader,
 } from '@material-ui/core';
-// import { useViewportScroll, useTransform, useSpring, motion } from "framer-motion";
 
 import {
   ParallaxBox,
@@ -155,101 +155,107 @@ function Home() {
   const firstTransitionRange = [0, windowHeight/3]
 
   return (
-    <main>
-      <div
-        className={styles.backgroundContainer}
-      >
-        <FadeBox
-          childRef={topGradientRef}
-          scrollInputRange={firstTransitionRange}
-          opacityOutputRange={[1, 0]}
+    <Layout title={"voices"} description={"Cultural immersion by discovering personal stories."}>
+      <main>
+        <div
+          className={styles.backgroundContainer}
         >
-          <div
-            ref={topGradientRef}
-            className={styles.bgYellowGradient}
-          />
-        </FadeBox>
-        <FadeBox
-          childRef={topGradientRef}
-          scrollInputRange={[...firstTransitionRange, windowHeight+400,windowHeight+600]}
-          opacityOutputRange={[0.2, 0.8, 0.8, 0]}
-        >
-          <img
-            ref={topGradientRef}
-            src={useBaseUrl("img/Maps-Big-Screenshot-ColorFaded.png")}
-            className={styles.bgImg}
-          />
-        </FadeBox>
-      </div>
-      <div
-        className={styles.contentContainer}
-      >
-        <Box 
-          height={`${windowHeight}px`}
-          className={styles.heroContainer}
-        >
-          <ParallaxBox 
-            yRange={firstTransitionRange}
-            easing={[0.5, 0, 0.75, 0]}
+          <FadeBox
+            childRef={topGradientRef}
+            scrollInputRange={firstTransitionRange}
+            opacityOutputRange={[1, 0]}
           >
-            <div className={styles.heroBanner}>
-              <Typography variant="h1" component="h1" align="center" gutterBottom>{siteConfig.title}</Typography>
-              <p className="hero__subtitle">{siteConfig.tagline}</p>
-            </div>
-          </ParallaxBox>
-        </Box>
-        <Box height="400px"/>
-        <Box height="400px">
-          <Typography variant="h2" component="h2" align="center" gutterBottom>ABC!</Typography>
-        </Box>
-        <Box height="400px">
-          <Typography variant="h2" component="h2" align="center" gutterBottom>ABC!</Typography>
-        </Box>
-        <Box>
-          <Typography variant="h2" component="h2" align="center" gutterBottom>Our Team!</Typography>
-          {features && features.length > 0 && (
-            <IntersectionObserver>
+            <div
+              ref={topGradientRef}
+              className={styles.bgYellowGradient}
+            />
+          </FadeBox>
+          <FadeBox
+            childRef={topGradientRef}
+            scrollInputRange={[...firstTransitionRange, windowHeight+400,windowHeight+600]}
+            opacityOutputRange={[0.2, 0.8, 0.8, 0]}
+          >
+            <img
+              ref={topGradientRef}
+              src={useBaseUrl("img/Maps-Big-Screenshot-ColorFaded.png")}
+              className={styles.bgImg}
+            />
+          </FadeBox>
+        </div>
+        <div
+          className={styles.contentContainer}
+        >
+          <Box 
+            height={`${windowHeight}px`}
+            className={styles.heroContainer}
+          >
+            <ParallaxBox 
+              yRange={firstTransitionRange}
+              easing={[0.5, 0, 0.75, 0]}
+            >
+              <div className={styles.heroBanner}>
+                <img
+                  alt="Voices text logo"
+                  src={useBaseUrl('img/voicesTextLogo.png')}
+                  width={"40%"}
+                />
+                <p className="hero__subtitle">{siteConfig.tagline}</p>
+              </div>
+            </ParallaxBox>
+          </Box>
+          <Box height="400px"/>
+          <Box height="400px">
+            <Typography variant="h2" component="h2" align="center" gutterBottom>ABC!</Typography>
+          </Box>
+          <Box height="400px">
+            <Typography variant="h2" component="h2" align="center" gutterBottom>ABC!</Typography>
+          </Box>
+          <Box>
+            <Typography variant="h2" component="h2" align="center" gutterBottom>Our Team!</Typography>
+            {features && features.length > 0 && (
+              <IntersectionObserver>
+                <section className={styles.features}>
+                  <div className="container">
+                    <div className="row">
+                      {features.map((props, idx) => (
+                        <Feature key={idx} delay={idx + 1} {...props} />
+                      ))}
+                    </div>
+                  </div>
+                </section>
+              </IntersectionObserver>
+            )}
+          </Box>
+          <Box height="200px"/>
+          <Box>
+            <Typography variant="h2" component="h2" align="center" gutterBottom>Our Journey</Typography>
+            {assignmentLinksFirstRow && assignmentLinksFirstRow.length > 0 && (
               <section className={styles.features}>
                 <div className="container">
                   <div className="row">
-                    {features.map((props, idx) => (
-                      <Feature key={idx} delay={idx + 1} {...props} />
+                    {assignmentLinksFirstRow.map((props, idx) => (
+                      <Feature key={idx} {...props} />
                     ))}
                   </div>
                 </div>
               </section>
-            </IntersectionObserver>
-          )}
-        </Box>
-        <Box height="200px"/>
-        <Box>
-          <Typography variant="h2" component="h2" align="center" gutterBottom>Our Journey</Typography>
-          {assignmentLinksFirstRow && assignmentLinksFirstRow.length > 0 && (
-            <section className={styles.features}>
-              <div className="container">
-                <div className="row">
-                  {assignmentLinksFirstRow.map((props, idx) => (
-                    <Feature key={idx} {...props} />
-                  ))}
+            )}
+            {assignmentLinksSecondRow && assignmentLinksSecondRow.length > 0 && (
+              <section className={styles.features}>
+                <div className="container">
+                  <div className="row">
+                    {assignmentLinksSecondRow.map((props, idx) => (
+                      <Feature key={idx} {...props} />
+                    ))}
+                  </div>
                 </div>
-              </div>
-            </section>
-          )}
-          {assignmentLinksSecondRow && assignmentLinksSecondRow.length > 0 && (
-            <section className={styles.features}>
-              <div className="container">
-                <div className="row">
-                  {assignmentLinksSecondRow.map((props, idx) => (
-                    <Feature key={idx} {...props} />
-                  ))}
-                </div>
-              </div>
-            </section>
-          )}
-        </Box>
-        <Box height="200px"/>
-      </div>
-    </main>
+              </section>
+            )}
+          </Box>
+          <Box height="200px"/>
+        </div>
+      </main>
+    </Layout>
   );
 }
 
