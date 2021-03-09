@@ -10,6 +10,7 @@ import {
   Box,
   Card,
   CardHeader,
+  CardContent
 } from '@material-ui/core';
 
 import {
@@ -70,57 +71,75 @@ const assignmentLinksFirstRow = [
   {
     title: 'Needfinding',
     linkTo: '/docs/needfinding',
-    presentationGoogle: 'Needfinding Slides',
+    presentationGoogle: 'Slides',
+    contentTitle: 'Presentation:',
+    pdfLink: 'assets/Needfinding-Presentation.pdf',
     presentationGoogleLink: "https://docs.google.com/presentation/d/e/2PACX-1vSFZ-Bbo51DCxwaYvyaR5cs9vYJ899ftWpomf6KkOhsACTS7Zo3R7xGmz3NSJ3TK1WYf8t5S_exNgNZ/embed?start=false&loop=false&delayms=60000",
   },
   {
     title: 'POVs & Prototyping',
     linkTo: '/docs/pov-and-experience-prototyping',
-    presentationGoogle: 'Experience Prototyping Slides',
-    presentationGoogleLink: "https://docs.google.com/presentation/d/e/2PACX-1vSFZ-Bbo51DCxwaYvyaR5cs9vYJ899ftWpomf6KkOhsACTS7Zo3R7xGmz3NSJ3TK1WYf8t5S_exNgNZ/embed?start=false&loop=false&delayms=60000",
+    contentTitle: 'Presentation:',
+    presentationGoogle: 'Slides',
+    presentationGoogleLink: "https://docs.google.com/presentation/d/e/2PACX-1vSKZ1Y48CPC1z6i__WhkrksVQELiEe74JnfkQgiLajUwP2r4JXUlhMIHHd-aNvEuCpTUiUnxYPXCUG7/pub?start=false&loop=false&delayms=30000",
+    pdfLink: 'assets/Assignment-2-Prototyping.pdf'
   },
   {
     title: 'Concept Video',
     linkTo: '/docs/concept-video',
-    presentationGoogle: 'Concept Video Slides',
-    presentationGoogleLink: 'https://docs.google.com/presentation/d/e/2PACX-1vSFZ-Bbo51DCxwaYvyaR5cs9vYJ899ftWpomf6KkOhsACTS7Zo3R7xGmz3NSJ3TK1WYf8t5S_exNgNZ/embed?start=false&loop=false&delayms=60000',
+    presentationGoogle: 'Watch',
+    contentTitle: 'Video:',
+    presentationGoogleLink: 'assets/concept-video-compressed.mp4',
   },
   {
     title: 'Low-fi Prototype',
     linkTo: '/docs/low-fi-prototype-and-test',
-    presentationGoogle: 'Low-Fi Prototype Slides)',
-    presentationGoogleLink: "https://docs.google.com/presentation/d/e/2PACX-1vSFZ-Bbo51DCxwaYvyaR5cs9vYJ899ftWpomf6KkOhsACTS7Zo3R7xGmz3NSJ3TK1WYf8t5S_exNgNZ/embed?start=false&loop=false&delayms=60000",
+    contentTitle: 'Presentation:',
+    reportLink: 'assets/Low-Fi-Prototyping-Report.pdf',
+    secondRowTitle: 'Report:',
+    secondRowContent: 'PDF',
+    presentationGoogle: 'Slides',
+    pdfLink: 'assets/Low-Fi-Protoype-Presentation.pdf',
+    presentationGoogleLink: "https://docs.google.com/presentation/d/e/2PACX-1vQK4PE-BI_h8kI89HMXFx5XMDSa2ybSwd1cB1j7R4jGugiufNHyERVXYmB-8WW6ARsF6yLn9DSTFnE5/pub?start=false&loop=false&delayms=30000",
   },
 ];
 const assignmentLinksSecondRow = [
   {
     title: 'Med-fi Prototype',
     linkTo: '/docs/medium-fi-prototype',
-    presentationGoogle: 'Med-Fi Prototype Slides',
-    presentationGoogleLink: "https://docs.google.com/presentation/d/e/2PACX-1vSFZ-Bbo51DCxwaYvyaR5cs9vYJ899ftWpomf6KkOhsACTS7Zo3R7xGmz3NSJ3TK1WYf8t5S_exNgNZ/embed?start=false&loop=false&delayms=60000",
+    contentTitle: 'Presentation:',
+    presentationGoogle: 'Slides',
+    secondRowTitle: 'Prototype:',
+    secondRowContent: 'Figma',
+    reportLink: 'https://www.figma.com/proto/d1azqt8OHaDjVIs11hnwG9/Full-Medium-Fi-Prototype?scaling=scale-down&node-id=88%3A9695',
+    pdfLink: 'assets/Med-Fi-Prototype.pdf',
+    presentationGoogleLink: 'https://docs.google.com/presentation/d/e/2PACX-1vQKDslGJ1R7nP5LD7F0EOcfaZrBNdqpU0CDSwRYskd4um_aZxTReS0hcvzsh2xoUoBqwteJJS3ZRrwh/pub?start=false&loop=false&delayms=30000',
   },
   {
-    title: 'Group HE',
+    title: 'Heuristic Eval',
     linkTo: '/docs/group-heuristic-evaluation',
-    presentationGoogle: 'Presentation (Google Docs)',
-    presentationGoogleLink: "https://docs.google.com/presentation/d/e/2PACX-1vSFZ-Bbo51DCxwaYvyaR5cs9vYJ899ftWpomf6KkOhsACTS7Zo3R7xGmz3NSJ3TK1WYf8t5S_exNgNZ/embed?start=false&loop=false&delayms=60000",
+    contentTitle: 'Report:',
+    presentationGoogle: 'PDF',
+    presentationGoogleLink: "assets/voices-group-he.pdf",
   },
   {
     title: 'Final Prototype',
     linkTo: '/docs/high-fidelity-prototype',
-    presentationGoogle: 'Presentation (Google Docs)',
+    contentTitle: 'Presentation:',
+    presentationGoogle: 'Slides',
     presentationGoogleLink: "https://docs.google.com/presentation/d/e/2PACX-1vSFZ-Bbo51DCxwaYvyaR5cs9vYJ899ftWpomf6KkOhsACTS7Zo3R7xGmz3NSJ3TK1WYf8t5S_exNgNZ/embed?start=false&loop=false&delayms=60000",
   },
   {
     title: 'Poster & Pitch',
     linkTo: '/docs/poster-and-pitch-slide',
-    presentationGoogle: 'Presentation (Google Docs)',
+    contentTitle: 'Presentation:',
+    presentationGoogle: 'Slides',
     presentationGoogleLink: "https://docs.google.com/presentation/d/e/2PACX-1vSFZ-Bbo51DCxwaYvyaR5cs9vYJ899ftWpomf6KkOhsACTS7Zo3R7xGmz3NSJ3TK1WYf8t5S_exNgNZ/embed?start=false&loop=false&delayms=60000",
   },
 ];
 
 
-function Feature({imageUrl, title, description, delay, linkTo, presentationGoogle, presentationGoogleLink}) {
+function Feature({imageUrl, title, description, delay, linkTo, secondRowContent, reportLink, secondRowTitle, contentTitle, presentationGoogle, presentationGoogleLink, pdfLink}) {
   const imgUrl = useBaseUrl(imageUrl);
   const featureContents = (
     <div>
@@ -142,14 +161,39 @@ function Feature({imageUrl, title, description, delay, linkTo, presentationGoogl
             {featureContents}
           </ScaleBox>
         : linkTo ? 
-            <Card>
+            <Card >
+              <CardContent className={styles.assignmentCardContent}>
             <Link to={linkTo}>
               <CardHeader
                 title={title}
                 titleTypographyProps={{align: "center"}}
+                className={styles.assignmentCardTitle}
               />
               </Link>
-              <a href={presentationGoogleLink}>{presentationGoogle}</a>
+              <div style={{display: 'flex', flexDirection: 'row'}}>
+                {
+                  contentTitle === 'Video:' || contentTitle === 'Report:' ?
+                  <Typography>
+                  {contentTitle} {<a href={presentationGoogleLink} style={{fontWeight:'bold'}}>{presentationGoogle}</a>} 
+                </Typography>
+                  :
+                <Typography>
+                  {contentTitle} {<a href={presentationGoogleLink} style={{fontWeight:'bold'}}>{presentationGoogle}</a>} | {<a href={pdfLink} style={{fontWeight:'bold'}}>PDF</a>}
+                </Typography>
+                }
+              </div>
+              <div style={{display: 'flex', flexDirection: 'row'}}>
+                {
+                  secondRowTitle ?
+                  <Typography>
+                  {secondRowTitle} {<a href={reportLink} style={{fontWeight:'bold'}}>{secondRowContent}</a>} 
+                </Typography>
+                  :
+                  "" 
+                }
+              </div>
+              
+              </CardContent>
             </Card>
         :
         {featureContents}
