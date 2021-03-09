@@ -24,46 +24,24 @@ const features = [
   {
     title: 'Ayelet Drazen',
     imageUrl: 'img/ayelet-face.png',
-    description: (
-      <>
-        B.A. Political Science
-        <br/>
-        M.S. Computer Science
-      </>
-    ),
+    descriptionA: "UI/UX Designer",
+    descriptionB: "Researcher"
   },
   {
     title: 'Baker Sharp',
     imageUrl: 'img/baker-face.png',
-    description: (
-      <>
-        B.S. Computer Science
-        <br/>
-        Education Minor
-      </>
-    ),
+    descriptionA: "Lead Web Developer",
   },
   {
     title: 'Krishnan Nair',
     imageUrl: 'img/krishnan-face.png',
-    description: (
-      <>
-        B.S. Computer Science
-        <br/>
-        
-      </>
-    ),
+    descriptionA: "Lead Mobile Developer",
   },
   {
     title: 'Taylor Lallas',
     imageUrl: 'img/taylor-face.png',
-    description: (
-      <>
-        B.A. Economics
-        <br/>
-        M.S. Computer Science
-      </>
-    ),
+    descriptionA: "UI/UX Designer",
+    descriptionB: "Developer",
   },
 ];
 
@@ -110,10 +88,13 @@ const assignmentLinksSecondRow = [
     contentTitle: 'Presentation:',
     presentationGoogle: 'Slides',
     secondRowTitle: 'Prototype:',
-    secondRowContent: 'Figma',
+    secondRowContent: 'Figma ',
     reportLink: 'https://www.figma.com/proto/d1azqt8OHaDjVIs11hnwG9/Full-Medium-Fi-Prototype?scaling=scale-down&node-id=88%3A9695',
     pdfLink: 'assets/Med-Fi-Prototype.pdf',
     presentationGoogleLink: 'https://docs.google.com/presentation/d/e/2PACX-1vQKDslGJ1R7nP5LD7F0EOcfaZrBNdqpU0CDSwRYskd4um_aZxTReS0hcvzsh2xoUoBqwteJJS3ZRrwh/pub?start=false&loop=false&delayms=30000',
+    thirdRowTitle: 'Readme:',
+    thirdRowContent: ' README',
+    readmeLink: 'assets/README.pdf'
   },
   {
     title: 'Heuristic Eval',
@@ -127,19 +108,19 @@ const assignmentLinksSecondRow = [
     linkTo: '/docs/high-fidelity-prototype',
     contentTitle: 'Presentation:',
     presentationGoogle: 'Slides',
-    presentationGoogleLink: "https://docs.google.com/presentation/d/e/2PACX-1vSFZ-Bbo51DCxwaYvyaR5cs9vYJ899ftWpomf6KkOhsACTS7Zo3R7xGmz3NSJ3TK1WYf8t5S_exNgNZ/embed?start=false&loop=false&delayms=60000",
+    presentationGoogleLink: "https://docs.google.com/presentation/d/e/2PACX-1vSDjHpOQfFkacNDTo5_19kzk4qtBXqKptnpYgIkVbBrEtE2SOpPbbIYV98Pz0NLogoqkcnqJwKx9Jbh/pub?start=false&loop=false&delayms=30000",
   },
   {
     title: 'Poster & Pitch',
     linkTo: '/docs/poster-and-pitch-slide',
     contentTitle: 'Presentation:',
     presentationGoogle: 'Slides',
-    presentationGoogleLink: "https://docs.google.com/presentation/d/e/2PACX-1vSFZ-Bbo51DCxwaYvyaR5cs9vYJ899ftWpomf6KkOhsACTS7Zo3R7xGmz3NSJ3TK1WYf8t5S_exNgNZ/embed?start=false&loop=false&delayms=60000",
+    presentationGoogleLink: "",
   },
 ];
 
 
-function Feature({imageUrl, title, description, delay, linkTo, secondRowContent, reportLink, secondRowTitle, contentTitle, presentationGoogle, presentationGoogleLink, pdfLink}) {
+function Feature({imageUrl, title, descriptionA, descriptionB, delay, linkTo, secondRowContent, reportLink, secondRowTitle, contentTitle, presentationGoogle, presentationGoogleLink, pdfLink, thirdRowContent, thirdRowTitle, readmeLink}) {
   const imgUrl = useBaseUrl(imageUrl);
   const featureContents = (
     <div>
@@ -149,9 +130,15 @@ function Feature({imageUrl, title, description, delay, linkTo, secondRowContent,
         </div>
       )}
       <Typography variant="h5" component="h4" align="center" gutterBottom>{title}</Typography>
-      {description && 
-        <p>{description}</p>
-      }
+        <div style={{textAlign:'center', alignItems: 'center'}}>
+        <span>{descriptionA}         
+        {
+          descriptionB ?
+            <span><span style={{fontWeight: '800', color: '#1DDBB5'}}> x </span>{descriptionB} </span>
+          :
+          ""
+        }</span> 
+        </div>
     </div>
   )
   return (
@@ -161,25 +148,25 @@ function Feature({imageUrl, title, description, delay, linkTo, secondRowContent,
             {featureContents}
           </ScaleBox>
         : linkTo ? 
-            <Card >
+            <Card className={styles.assignmentCard}>
               <CardContent className={styles.assignmentCardContent}>
             <Link to={linkTo}>
               <CardHeader
-                title={title}
-                titleTypographyProps={{align: "center"}}
+                title = {title}
+                titleTypographyProps={{align: "center", noWrap: 'true'}}
                 className={styles.assignmentCardTitle}
               />
               </Link>
               <div style={{display: 'flex', flexDirection: 'row'}}>
                 {
-                  contentTitle === 'Video:' || contentTitle === 'Report:' ?
+                    contentTitle === 'Video:' || contentTitle === 'Report:' ?
+                    <Typography>
+                    {contentTitle} {<a href={presentationGoogleLink} style={{fontWeight:'bold'}}>{presentationGoogle}</a>} 
+                  </Typography>
+                    :
                   <Typography>
-                  {contentTitle} {<a href={presentationGoogleLink} style={{fontWeight:'bold'}}>{presentationGoogle}</a>} 
-                </Typography>
-                  :
-                <Typography>
-                  {contentTitle} {<a href={presentationGoogleLink} style={{fontWeight:'bold'}}>{presentationGoogle}</a>} | {<a href={pdfLink} style={{fontWeight:'bold'}}>PDF</a>}
-                </Typography>
+                    {contentTitle} {<a href={presentationGoogleLink} style={{fontWeight:'bold'}}>{presentationGoogle}</a>} | {<a href={pdfLink} style={{fontWeight:'bold'}}>PDF</a>}
+                  </Typography>
                 }
               </div>
               <div style={{display: 'flex', flexDirection: 'row'}}>
@@ -187,6 +174,9 @@ function Feature({imageUrl, title, description, delay, linkTo, secondRowContent,
                   secondRowTitle ?
                   <Typography>
                   {secondRowTitle} {<a href={reportLink} style={{fontWeight:'bold'}}>{secondRowContent}</a>} 
+
+                  {thirdRowTitle ?  <span>|<a href={readmeLink} style={{fontWeight:'bold'}}>{thirdRowContent}</a></span>  : ""}
+
                 </Typography>
                   :
                   "" 
