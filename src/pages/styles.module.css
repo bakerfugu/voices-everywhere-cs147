@@ -85,7 +85,8 @@
 }
 .assignmentCardContent {
   background:rgba(253,240,175,1);
-  min-height: 150px;
+  min-height: 170px;
+  padding-bottom: 0;
 }
 
 .assignmentCardTitle {

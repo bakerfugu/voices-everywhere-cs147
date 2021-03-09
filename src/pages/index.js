@@ -77,6 +77,9 @@ const assignmentLinksFirstRow = [
     secondRowTitle: 'Report:',
     secondRowContent: 'PDF',
     presentationGoogle: 'Slides',
+    thirdRowTitle: 'Prototype:',
+    thirdRowContent: 'Invision',
+    invisionLink: 'https://projects.invisionapp.com/share/AP105Q3ADW7G#/screens',
     pdfLink: 'assets/Low-Fi-Protoype-Presentation.pdf',
     presentationGoogleLink: "https://docs.google.com/presentation/d/e/2PACX-1vQK4PE-BI_h8kI89HMXFx5XMDSa2ybSwd1cB1j7R4jGugiufNHyERVXYmB-8WW6ARsF6yLn9DSTFnE5/pub?start=false&loop=false&delayms=30000",
   },
@@ -92,7 +95,6 @@ const assignmentLinksSecondRow = [
     reportLink: 'https://www.figma.com/proto/d1azqt8OHaDjVIs11hnwG9/Full-Medium-Fi-Prototype?scaling=scale-down&node-id=88%3A9695',
     pdfLink: 'assets/Med-Fi-Prototype.pdf',
     presentationGoogleLink: 'https://docs.google.com/presentation/d/e/2PACX-1vQKDslGJ1R7nP5LD7F0EOcfaZrBNdqpU0CDSwRYskd4um_aZxTReS0hcvzsh2xoUoBqwteJJS3ZRrwh/pub?start=false&loop=false&delayms=30000',
-    thirdRowTitle: 'Readme:',
     thirdRowContent: ' README',
     readmeLink: 'assets/README.pdf'
   },
@@ -120,7 +122,7 @@ const assignmentLinksSecondRow = [
 ];
 
 
-function Feature({imageUrl, title, descriptionA, descriptionB, delay, linkTo, secondRowContent, reportLink, secondRowTitle, contentTitle, presentationGoogle, presentationGoogleLink, pdfLink, thirdRowContent, thirdRowTitle, readmeLink}) {
+function Feature({imageUrl, title, descriptionA, descriptionB, delay, linkTo, secondRowContent, reportLink, secondRowTitle, contentTitle, presentationGoogle, presentationGoogleLink, pdfLink, thirdRowContent, thirdRowTitle, invisionLink, readmeLink}) {
   const imgUrl = useBaseUrl(imageUrl);
   const featureContents = (
     <div>
@@ -175,7 +177,18 @@ function Feature({imageUrl, title, descriptionA, descriptionB, delay, linkTo, se
                   <Typography>
                   {secondRowTitle} {<a href={reportLink} style={{fontWeight:'bold'}}>{secondRowContent}</a>} 
 
-                  {thirdRowTitle ?  <span>|<a href={readmeLink} style={{fontWeight:'bold'}}>{thirdRowContent}</a></span>  : ""}
+                  {readmeLink ?  <span>|<a href={readmeLink} style={{fontWeight:'bold'}}>{thirdRowContent}</a></span>  : ""}
+
+                </Typography>
+                  :
+                  "" 
+                }
+              </div>
+              <div style={{display: 'flex', flexDirection: 'row'}}>
+                {
+                  thirdRowTitle ?
+                  <Typography>
+                  {thirdRowTitle} {<a href={invisionLink} style={{fontWeight:'bold'}}>{thirdRowContent}</a>} 
 
                 </Typography>
                   :
@@ -262,8 +275,31 @@ function Home() {
           <Box height="400px">
             <Typography variant="h2" component="h2" align="center" gutterBottom>ABC!</Typography>
           </Box>
-          <Box>
-            <Typography variant="h2" component="h2" align="center" gutterBottom>Our Team!</Typography>
+          <Box boxShadow={5} height="700px" style={{paddingTop: '3%', paddingBottom: '3%', backgroundColor: 'rgba(253,240,175,1)'}}>
+            <Box style={{display: 'flex', flexDirection: 'row', justifyContent:'space-evenly'}}>
+              <Box boxShadow={5} style={{padding: '1%', backgroundColor: 'white'}}>
+                <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
+                  <Typography variant="h2" component="h2" align="left" style={{fontWeight: 'bold'}} gutterBottom>explore</Typography>
+                  <img src={'img/explore.JPG'} style={{maxHeight: '500px'}}/>
+                </div>
+              </Box>
+            <Box boxShadow={5} style={{padding: '1%', backgroundColor: 'white'}}>
+              <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
+                <Typography variant="h2" component="h2" align="center" style={{fontWeight: 'bold'}} gutterBottom>listen</Typography>
+                <img src={'img/Listen.JPG'} style={{maxHeight: '500px'}}/>
+              </div>
+            </Box>
+            <Box boxShadow={5} style={{padding: '1%', backgroundColor: 'white'}}>
+              <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
+                <Typography variant="h2" component="h2" align="right" style={{fontWeight: 'bold'}} gutterBottom>share</Typography>
+                <img src={'img/record.JPG'} style={{maxHeight: '500px'}}/>
+              </div>
+           </Box>
+            </Box>
+
+          </Box>
+          <Box style={{paddingTop: '5%'}}>
+            <Typography variant="h2" component="h2" align="center" gutterBottom>Our Team</Typography>
             {features && features.length > 0 && (
               <IntersectionObserver>
                 <section className={styles.features}>
