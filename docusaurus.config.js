@@ -28,7 +28,9 @@ module.exports = {
         {
           to: 'docs/',
           activeBasePath: 'docs',
-          label: 'Our Work',
+          //activeBasePath: "#our-journey",
+          //href: '#our-journey',
+          label: 'Our Journey',
           position: 'left',
         },
         {
@@ -36,44 +38,44 @@ module.exports = {
           label: 'CS147',
           position: 'right',
         },
-        {
-          href: 'https://github.com/bakerfugu/voices-everywhere-cs147/',
-          label: 'Source',
-          position: 'right',
-        },
+        // {
+        //   href: 'https://github.com/bakerfugu/voices-everywhere-cs147/',
+        //   label: 'Source',
+        //   position: 'right',
+        // },
       ],
     },
     footer: {
-      style: 'dark',
-      links: [
-        {
-          title: 'Our Work',
-          items: [
-            {
-              label: 'Overview',
-              to: 'docs/',
-            },
-            {
-              label: 'Final Prototype',
-              to: 'docs/high-fidelity-prototype/',
-            },
-          ],
-        },
-        {
-          title: 'More',
-          items: [
-            {
-              label: 'CS147 Course Site',
-              href: 'http://cs147.stanford.edu/',
-            },
-            {
-              label: 'GitHub',
-              href: 'https://bakerfugu.github.io/voices-everywhere-cs147/',
-            },
-          ],
-        },
-      ],
-      copyright: `Made for the CS147 course at Stanford. Built with Docusaurus.`,
+      // style: 'dark',
+      // links: [
+      //   {
+      //     title: 'Our Work',
+      //     items: [
+      //       {
+      //         label: 'Overview',
+      //         to: 'docs/',
+      //       },
+      //       {
+      //         label: 'Final Prototype',
+      //         to: 'docs/high-fidelity-prototype/',
+      //       },
+      //     ],
+      //   },
+      //   {
+      //     title: 'More',
+      //     items: [
+      //       {
+      //         label: 'CS147 Course Site',
+      //         href: 'http://cs147.stanford.edu/',
+      //       },
+      //       {
+      //         label: 'GitHub',
+      //         href: 'https://bakerfugu.github.io/voices-everywhere-cs147/',
+      //       },
+      //     ],
+      //   },
+      // ],
+      // copyright: `Made for the CS147 course at Stanford. Built with Docusaurus.`,
     },
   },
   presets: [
@@ -82,8 +84,8 @@ module.exports = {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          editUrl:
-            'https://github.com/bakerfugu/voices-everywhere-cs147/tree/main/',
+          // editUrl:
+          //   'https://github.com/bakerfugu/voices-everywhere-cs147/tree/main/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
