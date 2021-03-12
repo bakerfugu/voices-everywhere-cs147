@@ -132,3 +132,21 @@
   max-width: 250px;
   overflow: hidden; */
 }
+
+.videoFrame {
+  display: block;
+  text-align: center;
+  /* width: 60%;
+  height: 800px; */
+
+}
+
+.videoFrameCard {
+  /* border-radius: 50%;
+  background-color:white;
+  background-size: 10%;
+  height: 500px;
+  width: 100%; */
+  display: block;
+  text-align: center;
+}

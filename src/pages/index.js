@@ -25,6 +25,13 @@ import {
 } from '../components'
 import Icon from "@material-ui/core/Icon";
 import ExploreIcon from '@material-ui/icons/Explore';
+import PeopleIcon from '@material-ui/icons/People';
+import MovieCreationIcon from '@material-ui/icons/MovieCreation';
+import CreateIcon from '@material-ui/icons/Create';
+import AccountTreeIcon from '@material-ui/icons/AccountTree';
+import AssignmentIcon from '@material-ui/icons/Assignment';
+import PhoneIphoneIcon from '@material-ui/icons/PhoneIphone';
+import ImportantDevicesIcon from '@material-ui/icons/ImportantDevices';
 
 const features = [
   {
@@ -59,6 +66,7 @@ const assignmentLinksFirstRow = [
     contentTitle: 'Presentation:',
     pdfLink: 'assets/Needfinding-Presentation.pdf',
     presentationGoogleLink: "https://docs.google.com/presentation/d/e/2PACX-1vSFZ-Bbo51DCxwaYvyaR5cs9vYJ899ftWpomf6KkOhsACTS7Zo3R7xGmz3NSJ3TK1WYf8t5S_exNgNZ/embed?start=false&loop=false&delayms=60000",
+    icon: <ExploreIcon style={{fontSize: '45px', fill: "black"}}/>, 
   },
   {
     title: 'POVs & Prototyping',
@@ -66,14 +74,29 @@ const assignmentLinksFirstRow = [
     contentTitle: 'Presentation:',
     presentationGoogle: 'Slides',
     presentationGoogleLink: "https://docs.google.com/presentation/d/e/2PACX-1vSKZ1Y48CPC1z6i__WhkrksVQELiEe74JnfkQgiLajUwP2r4JXUlhMIHHd-aNvEuCpTUiUnxYPXCUG7/pub?start=false&loop=false&delayms=30000",
-    pdfLink: 'assets/Assignment-2-Prototyping.pdf'
+    pdfLink: 'assets/Assignment-2-Prototyping.pdf',
+    icon: <PeopleIcon style={{fontSize: '45px', fill: "black"}}/>,
   },
   {
+    // title: 'Concept Video',
+    // linkTo: '/docs/concept-video',
+    // presentationGoogle: 'Watch',
+    // contentTitle: 'Video:',
+    // presentationGoogleLink: 'assets/concept-video-compressed.mp4',
+    // presentationGoogle: 'Watch',
+    // contentTitle: 'Video:',
+    // presentationGoogleLink: 'assets/concept-video-compressed.mp4',
+
     title: 'Concept Video',
     linkTo: '/docs/concept-video',
-    presentationGoogle: 'Watch',
-    contentTitle: 'Video:',
-    presentationGoogleLink: 'assets/concept-video-compressed.mp4',
+    contentTitle: 'Presentation:',
+    secondRowTitle: 'Video:',
+    secondRowContent: 'Watch ',
+    presentationGoogle: 'Slides',
+    reportLink: 'assets/concept-video-compressed.mp4',
+    pdfLink: 'assets/Assignment-3-Concept-Video.pdf',
+    presentationGoogleLink: "https://docs.google.com/presentation/d/e/2PACX-1vTJwx_QP3RxM-eR4Hhol-XF56YwjdZPDbe_yGxCtxrc3UEVFqZ6J4qmNdCetdZpABWW2Wu8ykt-OjBM/embed?start=true&loop=false&delayms=3000",
+    icon: <MovieCreationIcon style={{fontSize: '45px', fill: "black"}}/>,
   },
   {
     title: 'Low-fi Prototype',
@@ -88,6 +111,7 @@ const assignmentLinksFirstRow = [
     invisionLink: 'https://projects.invisionapp.com/share/AP105Q3ADW7G#/screens',
     pdfLink: 'assets/Low-Fi-Protoype-Presentation.pdf',
     presentationGoogleLink: "https://docs.google.com/presentation/d/e/2PACX-1vQK4PE-BI_h8kI89HMXFx5XMDSa2ybSwd1cB1j7R4jGugiufNHyERVXYmB-8WW6ARsF6yLn9DSTFnE5/pub?start=false&loop=false&delayms=30000",
+    icon: <CreateIcon style={{fontSize: '45px', fill: "black"}}/>,
   },
 ];
 const assignmentLinksSecondRow = [
@@ -102,14 +126,16 @@ const assignmentLinksSecondRow = [
     pdfLink: 'assets/Med-Fi-Prototype.pdf',
     presentationGoogleLink: 'https://docs.google.com/presentation/d/e/2PACX-1vQKDslGJ1R7nP5LD7F0EOcfaZrBNdqpU0CDSwRYskd4um_aZxTReS0hcvzsh2xoUoBqwteJJS3ZRrwh/pub?start=false&loop=false&delayms=30000',
     thirdRowContent: ' README',
-    readmeLink: 'assets/README.pdf'
+    readmeLink: 'assets/README.pdf',
+    icon: <AccountTreeIcon style={{fontSize: '45px', fill: "black"}}/>,
   },
   {
-    title: 'Heuristic Eval',
+    title: 'Heuristic Evaluation',
     linkTo: '/docs/group-heuristic-evaluation',
     contentTitle: 'Report:',
     presentationGoogle: 'PDF',
     presentationGoogleLink: "assets/voices-group-he.pdf",
+    icon: <AssignmentIcon style={{fontSize: '45px', fill: "black"}}/>,
   },
   {
     title: 'Final Prototype',
@@ -117,6 +143,7 @@ const assignmentLinksSecondRow = [
     contentTitle: 'Presentation:',
     presentationGoogle: 'Slides',
     presentationGoogleLink: "https://docs.google.com/presentation/d/e/2PACX-1vSDjHpOQfFkacNDTo5_19kzk4qtBXqKptnpYgIkVbBrEtE2SOpPbbIYV98Pz0NLogoqkcnqJwKx9Jbh/pub?start=false&loop=false&delayms=30000",
+    icon: <PhoneIphoneIcon style={{fontSize: '45px', fill: "black"}}/>,
   },
   {
     title: 'Poster & Pitch',
@@ -124,11 +151,12 @@ const assignmentLinksSecondRow = [
     contentTitle: 'Presentation:',
     presentationGoogle: 'Slides',
     presentationGoogleLink: "",
+    icon: <ImportantDevicesIcon style={{fontSize: '45px'}}/>,
   },
 ];
 
 
-function Feature({imageUrl, title, descriptionA, descriptionB, delay, linkTo, secondRowContent, reportLink, secondRowTitle, contentTitle, presentationGoogle, presentationGoogleLink, pdfLink, thirdRowContent, thirdRowTitle, invisionLink, readmeLink}) {
+function Feature({imageUrl, title, descriptionA, descriptionB, delay, linkTo, secondRowContent, reportLink, secondRowTitle, contentTitle, presentationGoogle, presentationGoogleLink, pdfLink, thirdRowContent, thirdRowTitle, invisionLink, readmeLink, icon}) {
   const imgUrl = useBaseUrl(imageUrl);
   const featureContents = (
     <div>
@@ -156,7 +184,7 @@ function Feature({imageUrl, title, descriptionA, descriptionB, delay, linkTo, se
             {featureContents}
           </ScaleBox>
         : linkTo ? 
-   
+            <div>
             <CardContent className={styles.assignmentCardContent} style={{backgroundImage: "url(img/orb3.png)", backgroundRepeat: "no-repeat", backgroundPosition:"center", backgroundSize:"110%", justifyContent: 'center', alignItems: 'center', display: 'flex', flexDirection: 'column'}} >
             <Link to={linkTo}>
               <CardHeader
@@ -165,25 +193,27 @@ function Feature({imageUrl, title, descriptionA, descriptionB, delay, linkTo, se
                 className={styles.assignmentCardTitle}
               />
               </Link>
-              <div style={{display: 'flex', flexDirection: 'row', alignItems:'center', justifyContent:'center'}}>
+              {icon}
+              {/* <ExploreIcon style={{fontSize: '45px'}}/> */}
+              {/* <div style={{display: 'flex', flexDirection: 'row', alignItems:'center', justifyContent:'center', fontSize: 10}}>
                 {
                     contentTitle === 'Video:' || contentTitle === 'Report:' ?
-                    <Typography>
-                    {contentTitle} {<a href={presentationGoogleLink} style={{fontWeight:'bold'}}>{presentationGoogle}</a>} 
+                    <Typography variant='caption'>
+                    {contentTitle} {<a href={presentationGoogleLink} style={{fontWeight:'bold', fontSize: 10}}>{presentationGoogle}</a>} 
                   </Typography>
                     :
-                  <Typography>
-                    {contentTitle} {<a href={presentationGoogleLink} style={{fontWeight:'bold'}}>{presentationGoogle}</a>} | {<a href={pdfLink} style={{fontWeight:'bold'}}>PDF</a>}
+                  <Typography variant='caption'>
+                    {contentTitle} {<a href={presentationGoogleLink} style={{fontWeight:'bold', fontSize: 10}}>{presentationGoogle}</a>} | {<a href={pdfLink} style={{fontWeight:'bold'}}>PDF</a>}
                   </Typography>
                 }
               </div>
               <div style={{display: 'flex', flexDirection: 'row', alignItems:'center', justifyContent:'center'}}>
                 {
                   secondRowTitle ?
-                  <Typography>
-                  {secondRowTitle} {<a href={reportLink} style={{fontWeight:'bold'}}>{secondRowContent}</a>} 
+                  <Typography variant='caption'>
+                  {secondRowTitle} {<a href={reportLink} style={{fontWeight:'bold', fontSize: 10}}>{secondRowContent}</a>} 
 
-                  {readmeLink ?  <span>|<a href={readmeLink} style={{fontWeight:'bold'}}>{thirdRowContent}</a></span>  : ""}
+                  {readmeLink ?  <span>|<a href={readmeLink} style={{fontWeight:'bold', fontSize: 10}}>{thirdRowContent}</a></span>  : ""}
 
                 </Typography>
                   :
@@ -193,16 +223,56 @@ function Feature({imageUrl, title, descriptionA, descriptionB, delay, linkTo, se
               <div style={{display: 'flex', flexDirection: 'row', alignItems:'center', justifyContent:'center'}}>
                 {
                   thirdRowTitle ?
-                  <Typography>
-                  {thirdRowTitle} {<a href={invisionLink} style={{fontWeight:'bold'}}>{thirdRowContent}</a>} 
+                  <Typography variant='caption'>
+                  {thirdRowTitle} {<a href={invisionLink} style={{fontWeight:'bold', fontSize: 10}}>{thirdRowContent}</a>} 
 
                 </Typography>
                   :
                   "" 
                 }
-              </div>
+              </div> */}
               
               </CardContent>
+
+
+              <div style={{display: 'flex', flexDirection: 'row', alignItems:'center', justifyContent:'center'}}>
+              {
+                  contentTitle === 'Video:' || contentTitle === 'Report:' ?
+                  <Typography variant="subtitle1">
+                  {contentTitle} {<a href={presentationGoogleLink} style={{fontWeight:'bold', fontSize: 16}}>{presentationGoogle}</a>} 
+                </Typography>
+                  :
+                <Typography variant="subtitle1">
+                  {contentTitle} {<a href={presentationGoogleLink} style={{fontWeight:'bold', fontSize: 16}}>{presentationGoogle}</a>} | {<a href={pdfLink} style={{fontWeight:'bold'}}>PDF</a>}
+                </Typography>
+              }
+            </div>
+            <div style={{display: 'flex', flexDirection: 'row', alignItems:'center', justifyContent:'center'}}>
+              {
+                secondRowTitle ?
+                <Typography variant="subtitle1">
+                {secondRowTitle} {<a href={reportLink} style={{fontWeight:'bold', fontSize: 16}}>{secondRowContent}</a>} 
+
+                {readmeLink ?  <span>|<a href={readmeLink} style={{fontWeight:'bold', fontSize: 16}}>{thirdRowContent}</a></span>  : ""}
+
+              </Typography>
+                :
+                "" 
+              }
+            </div>
+            <div style={{display: 'flex', flexDirection: 'row', alignItems:'center', justifyContent:'center'}}>
+              {
+                thirdRowTitle ?
+                <Typography>
+                {thirdRowTitle} {<a href={invisionLink} style={{fontWeight:'bold', fontSize: 16}}>{thirdRowContent}</a>} 
+
+              </Typography>
+                :
+                "" 
+              }
+            </div>
+            </div>
+
              
             
         :
@@ -277,16 +347,49 @@ function Home() {
               </div>
             </ParallaxBox>
           </Box>
+
+          {/* <div className={styles.videoFrame}>
+            <iframe width="640" height="360" src="https://www.youtube.com/embed/cvilv2km4kE" 
+            frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowFullScreen className={styles.video}></iframe>
+          </div> */}
+
+          <div className={styles.videoFrame}> 
+            <video width="640" height="360" controls className={styles.video}>
+              <source src={useBaseUrl("assets/concept-video-compressed.mp4")} type="video/mp4"/>
+            </video>
+
+            <Box>
+                <form action="https://www.youtube.com/embed/cvilv2km4kE" style={{display:"inline"}}>
+                <Button type="submit" variant="contained" style={{backgroundColor: "#25c2a0", color: "white", fontWeight: 800, width: '10%', fontSize: 12, borderRadius: 25}}>
+                  Watch on Youtube
+                </Button>
+                </form>
+                <form method="get" action={useBaseUrl("assets/concept-video-compressed.mp4")} style={{display:"inline"}}>
+                <Button type="submit" variant="contained" style={{backgroundColor: "#25c2a0", color: "white", fontWeight: 800, width: '10%', fontSize: 12, borderRadius: 25, margin: '1%'}}>
+                  Download
+                </Button>
+                </form>
+          </Box>
+          </div>
+
           <Box>
-          <img src={"img/newest_version.png"} style={{maxHeight: '500px', marginLeft: '15%'}}/>
+          <img src={"img/newest_version.png"} style={{maxHeight: '400px', marginLeft: '20%', marginTop:"10%", overflow:'hidden', display: 'inline'}}/>
+        
+          </Box>
+
+          {/* <div className={styles.videoFrame} style={{backgroundImage: "url(img/plain_orb.png)", backgroundRepeat: "no-repeat", backgroundPosition:"center", backgroundSize:"110%", justifyContent: 'center', alignItems: 'center', display: 'flex', flexDirection: 'column'}}> 
+            <video width="426" height="240" controls className={styles.video}>
+              <source src={useBaseUrl("assets/concept-video-compressed.mp4")} type="video/mp4"/>
+            </video>
+          </div> */}
+
+          <Box>
+          <img src={"img/next_orb.png"} style={{maxHeight: '400px', marginLeft: '55%'}}/>
           </Box>
 
           <Box>
-          <img src={"img/next_orb.png"} style={{maxHeight: '500px', marginLeft: '55%'}}/>
-          </Box>
-
-          <Box>
-          <img src={"img/final_orb.png"} style={{maxHeight: '500px', marginLeft: '25%', marginBottom: "10%"}}/>
+          <img src={"img/final_orb.png"} style={{maxHeight: '400px', marginLeft: '30%', marginBottom: "10%"}}/>
           </Box>
           
           <Box style={{display: 'flex', flexDirection: 'row', justifyContent: "space-evenly"}}>
@@ -295,9 +398,14 @@ function Home() {
                 Explore voices everywhere 
               </Typography>
               <Box>
-                <Button variant="contained" style={{backgroundColor: "#25c2a0", color: "white", fontWeight: 800, width: '33%', fontSize: 18, borderRadius: 25}}>
+              <form action='https://www.figma.com/proto/d1azqt8OHaDjVIs11hnwG9/Full-Medium-Fi-Prototype?node-id=88%3A9695&scaling=scale-down'>
+                <Button type="submit" variant="contained" style={{backgroundColor: "#25c2a0", color: "white", fontWeight: 800, width: '33%', fontSize: 18, borderRadius: 25}}>
                   Try our prototype
                 </Button>
+              </form>
+                {/* <Button variant="contained" style={{backgroundColor: "#25c2a0", color: "white", fontWeight: 800, width: '33%', fontSize: 18, borderRadius: 25}} >
+                  Try our prototype
+                </Button> */}
               </Box>
             </Box>
             <Box>
