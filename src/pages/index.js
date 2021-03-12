@@ -5,6 +5,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import Layout from '@theme/Layout';
 import styles from './styles.module.css';
+
 import {
   Typography,
   Box,
@@ -12,7 +13,8 @@ import {
   CardHeader,
   CardContent, 
   Button, 
-  CardMedia
+  CardMedia,
+  Container
 } from '@material-ui/core';
 
 import {
@@ -49,83 +51,7 @@ const features = [
   },
 ];
 
-// const assignmentLinksFirstRow = [
-//   {
-//     title: 'Needfinding',
-//     linkTo: '/docs/needfinding',
-//     presentationGoogle: 'Slides',
-//     contentTitle: 'Presentation:',
-//     pdfLink: 'assets/Needfinding-Presentation.pdf',
-//     presentationGoogleLink: "https://docs.google.com/presentation/d/e/2PACX-1vSFZ-Bbo51DCxwaYvyaR5cs9vYJ899ftWpomf6KkOhsACTS7Zo3R7xGmz3NSJ3TK1WYf8t5S_exNgNZ/embed?start=false&loop=false&delayms=60000",
-//   },
-//   {
-//     title: 'POVs & Prototyping',
-//     linkTo: '/docs/pov-and-experience-prototyping',
-//     contentTitle: 'Presentation:',
-//     presentationGoogle: 'Slides',
-//     presentationGoogleLink: "https://docs.google.com/presentation/d/e/2PACX-1vSKZ1Y48CPC1z6i__WhkrksVQELiEe74JnfkQgiLajUwP2r4JXUlhMIHHd-aNvEuCpTUiUnxYPXCUG7/pub?start=false&loop=false&delayms=30000",
-//     pdfLink: 'assets/Assignment-2-Prototyping.pdf'
-//   },
-//   {
-//     title: 'Concept Video',
-//     linkTo: '/docs/concept-video',
-//     presentationGoogle: 'Watch',
-//     contentTitle: 'Video:',
-//     presentationGoogleLink: 'assets/concept-video-compressed.mp4',
-//   },
-//   {
-//     title: 'Low-fi Prototype',
-//     linkTo: '/docs/low-fi-prototype-and-test',
-//     contentTitle: 'Presentation:',
-//     reportLink: 'assets/Low-Fi-Prototyping-Report.pdf',
-//     secondRowTitle: 'Report:',
-//     secondRowContent: 'PDF',
-//     presentationGoogle: 'Slides',
-//     thirdRowTitle: 'Prototype:',
-//     thirdRowContent: 'Invision',
-//     invisionLink: 'https://projects.invisionapp.com/share/AP105Q3ADW7G#/screens',
-//     pdfLink: 'assets/Low-Fi-Protoype-Presentation.pdf',
-//     presentationGoogleLink: "https://docs.google.com/presentation/d/e/2PACX-1vQK4PE-BI_h8kI89HMXFx5XMDSa2ybSwd1cB1j7R4jGugiufNHyERVXYmB-8WW6ARsF6yLn9DSTFnE5/pub?start=false&loop=false&delayms=30000",
-//   },
-// ];
-// const assignmentLinksSecondRow = [
-//   {
-//     title: 'Med-fi Prototype',
-//     linkTo: '/docs/medium-fi-prototype',
-//     contentTitle: 'Presentation:',
-//     presentationGoogle: 'Slides',
-//     secondRowTitle: 'Prototype:',
-//     secondRowContent: 'Figma ',
-//     reportLink: 'https://www.figma.com/proto/d1azqt8OHaDjVIs11hnwG9/Full-Medium-Fi-Prototype?scaling=scale-down&node-id=88%3A9695',
-//     pdfLink: 'assets/Med-Fi-Prototype.pdf',
-//     presentationGoogleLink: 'https://docs.google.com/presentation/d/e/2PACX-1vQKDslGJ1R7nP5LD7F0EOcfaZrBNdqpU0CDSwRYskd4um_aZxTReS0hcvzsh2xoUoBqwteJJS3ZRrwh/pub?start=false&loop=false&delayms=30000',
-//     thirdRowContent: ' README',
-//     readmeLink: 'assets/README.pdf'
-//   },
-//   {
-//     title: 'Heuristic Eval',
-//     linkTo: '/docs/group-heuristic-evaluation',
-//     contentTitle: 'Report:',
-//     presentationGoogle: 'PDF',
-//     presentationGoogleLink: "assets/voices-group-he.pdf",
-//   },
-//   {
-//     title: 'Final Prototype',
-//     linkTo: '/docs/high-fidelity-prototype',
-//     contentTitle: 'Presentation:',
-//     presentationGoogle: 'Slides',
-//     presentationGoogleLink: "https://docs.google.com/presentation/d/e/2PACX-1vSDjHpOQfFkacNDTo5_19kzk4qtBXqKptnpYgIkVbBrEtE2SOpPbbIYV98Pz0NLogoqkcnqJwKx9Jbh/pub?start=false&loop=false&delayms=30000",
-//   },
-//   {
-//     title: 'Poster & Pitch',
-//     linkTo: '/docs/poster-and-pitch-slide',
-//     contentTitle: 'Presentation:',
-//     presentationGoogle: 'Slides',
-//     presentationGoogleLink: "",
-//   },
-// ];
-
-const assign = [
+const assignmentLinksFirstRow = [
   {
     title: 'Needfinding',
     linkTo: '/docs/needfinding',
@@ -163,6 +89,8 @@ const assign = [
     pdfLink: 'assets/Low-Fi-Protoype-Presentation.pdf',
     presentationGoogleLink: "https://docs.google.com/presentation/d/e/2PACX-1vQK4PE-BI_h8kI89HMXFx5XMDSa2ybSwd1cB1j7R4jGugiufNHyERVXYmB-8WW6ARsF6yLn9DSTFnE5/pub?start=false&loop=false&delayms=30000",
   },
+];
+const assignmentLinksSecondRow = [
   {
     title: 'Med-fi Prototype',
     linkTo: '/docs/medium-fi-prototype',
@@ -228,16 +156,16 @@ function Feature({imageUrl, title, descriptionA, descriptionB, delay, linkTo, se
             {featureContents}
           </ScaleBox>
         : linkTo ? 
-            <Card className={styles.assignmentCard}>
-              <CardContent className={styles.assignmentCardContent}>
+   
+            <CardContent className={styles.assignmentCardContent} style={{backgroundImage: "url(img/orb3.png)", backgroundRepeat: "no-repeat", backgroundPosition:"center", backgroundSize:"110%", justifyContent: 'center', alignItems: 'center', display: 'flex', flexDirection: 'column'}} >
             <Link to={linkTo}>
               <CardHeader
                 title = {title}
-                titleTypographyProps={{align: "center", noWrap: 'true'}}
+                titleTypographyProps={{align: "center"}}
                 className={styles.assignmentCardTitle}
               />
               </Link>
-              <div style={{display: 'flex', flexDirection: 'row'}}>
+              <div style={{display: 'flex', flexDirection: 'row', alignItems:'center', justifyContent:'center'}}>
                 {
                     contentTitle === 'Video:' || contentTitle === 'Report:' ?
                     <Typography>
@@ -249,7 +177,7 @@ function Feature({imageUrl, title, descriptionA, descriptionB, delay, linkTo, se
                   </Typography>
                 }
               </div>
-              <div style={{display: 'flex', flexDirection: 'row'}}>
+              <div style={{display: 'flex', flexDirection: 'row', alignItems:'center', justifyContent:'center'}}>
                 {
                   secondRowTitle ?
                   <Typography>
@@ -262,7 +190,7 @@ function Feature({imageUrl, title, descriptionA, descriptionB, delay, linkTo, se
                   "" 
                 }
               </div>
-              <div style={{display: 'flex', flexDirection: 'row'}}>
+              <div style={{display: 'flex', flexDirection: 'row', alignItems:'center', justifyContent:'center'}}>
                 {
                   thirdRowTitle ?
                   <Typography>
@@ -275,7 +203,8 @@ function Feature({imageUrl, title, descriptionA, descriptionB, delay, linkTo, se
               </div>
               
               </CardContent>
-            </Card>
+             
+            
         :
         {featureContents}
       }
@@ -341,7 +270,7 @@ function Home() {
               <div className={styles.heroBanner}>
                 <img
                   alt="Voices text logo"
-                  src={useBaseUrl('img/voicesTextLogo.png')}
+                  src={useBaseUrl('img/voicesLogo.png')}
                   width={"40%"}
                 />
                 <p className="hero__subtitle">{siteConfig.tagline}</p>
@@ -403,7 +332,7 @@ function Home() {
           <Box height="200px"/>
           <Box>
             <Typography variant="h2" component="h2" align="center" gutterBottom>Our Journey</Typography>
-            {/* {assignmentLinksFirstRow && assignmentLinksFirstRow.length > 0 && (
+            {assignmentLinksFirstRow && assignmentLinksFirstRow.length > 0 && (
               <section className={styles.features}>
                 <div className="container">
                   <div className="row">
@@ -424,8 +353,8 @@ function Home() {
                   </div>
                 </div>
               </section>
-            )} */}
-            <Box style={{display:"flex", flexDirection: 'row', justifyContent: "space-between", marginLeft: '20%', marginRight: '20%'}}>
+            )}
+            {/* <Box style={{display:"flex", flexDirection: 'row', justifyContent: "space-evenly", marginLeft: '10%', marginRight: '10%'}}>
             <Button variant="outlined" style={{borderColor: "#25c2a0", border:"2 solid #25c2a0", backgroundColor: "white", borderWidth: 2, color: "black", fontWeight: 500, fontSize: 14, borderRadius: 15}} onClick={()=> setChosen(1)}>Needfinding</Button>
             <Button variant="outlined" style={{borderColor: "#25c2a0", border:"2 solid #25c2a0", backgroundColor: "white", borderWidth: 2, color: "black", fontWeight: 500, fontSize: 14, borderRadius: 15}} onClick={()=> setChosen(2)}>Needfinding</Button>
             <Button variant="outlined" style={{borderColor: "#25c2a0", border:"2 solid #25c2a0", backgroundColor: "white", borderWidth: 2, color: "black", fontWeight: 500, fontSize: 14, borderRadius: 15}} onClick={()=> setChosen(1)}>Needfinding</Button>
@@ -434,29 +363,8 @@ function Home() {
             <Button variant="outlined" style={{borderColor: "#25c2a0", border:"2 solid #25c2a0", backgroundColor: "white", borderWidth: 2, color: "black", fontWeight: 500, fontSize: 14, borderRadius: 15}}>Needfinding</Button>
             <Button variant="outlined" style={{borderColor: "#25c2a0", border:"2 solid #25c2a0", backgroundColor: "white", borderWidth: 2, color: "black", fontWeight: 500, fontSize: 14, borderRadius: 15}}>Needfinding</Button>
             <Button variant="outlined" style={{borderColor: "#25c2a0", border:"2 solid #25c2a0", backgroundColor: "white", borderWidth: 2, color: "black", fontWeight: 500, fontSize: 14, borderRadius: 15}}>Needfinding</Button>
-            </Box>
-            <Box>
+            </Box> */}
 
-              {chosen === 1 ? 
-                <Card>
-                <div>
-                  <CardContent>
-                    <Typography component="h5" variant="h5">
-                      Live From Space
-                    </Typography>
-                    <Typography variant="subtitle1" color="textSecondary">
-                      Mac Miller
-                    </Typography>
-                  </CardContent>
-                  <div >
-                  </div>
-                </div>
-                <CardMedia
-                  title="Live from space album cover"
-                />
-              </Card>
-              : ""}
-            </Box>
           </Box>
           <Box height="200px"/>
         </div>
