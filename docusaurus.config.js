@@ -1,6 +1,6 @@
 module.exports = {
   title: 'Voices',
-  tagline: 'Cultural immersion by discovering personal stories.',
+  tagline: 'cultural immersion by discovering personal stories',
   // Url options to deploy to github pages
   url: 'https://bakerfugu.github.io',
   baseUrl: '/voices-everywhere-cs147/',
@@ -46,7 +46,7 @@ module.exports = {
       ],
     },
     footer: {
-      // style: 'dark',
+       style: 'light',
       // links: [
       //   {
       //     title: 'Our Work',
@@ -75,7 +75,7 @@ module.exports = {
       //     ],
       //   },
       // ],
-      // copyright: `Made for the CS147 course at Stanford. Built with Docusaurus.`,
+      copyright: `Made for the CS147 course at Stanford. Built with Docusaurus.`,
     },
   },
   presets: [
