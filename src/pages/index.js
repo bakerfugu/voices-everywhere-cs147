@@ -193,45 +193,7 @@ function Feature({imageUrl, title, descriptionA, descriptionB, delay, linkTo, se
                 className={styles.assignmentCardTitle}
               />
               </Link>
-              {icon}
-              {/* <ExploreIcon style={{fontSize: '45px'}}/> */}
-              {/* <div style={{display: 'flex', flexDirection: 'row', alignItems:'center', justifyContent:'center', fontSize: 10}}>
-                {
-                    contentTitle === 'Video:' || contentTitle === 'Report:' ?
-                    <Typography variant='caption'>
-                    {contentTitle} {<a href={presentationGoogleLink} style={{fontWeight:'bold', fontSize: 10}}>{presentationGoogle}</a>} 
-                  </Typography>
-                    :
-                  <Typography variant='caption'>
-                    {contentTitle} {<a href={presentationGoogleLink} style={{fontWeight:'bold', fontSize: 10}}>{presentationGoogle}</a>} | {<a href={pdfLink} style={{fontWeight:'bold'}}>PDF</a>}
-                  </Typography>
-                }
-              </div>
-              <div style={{display: 'flex', flexDirection: 'row', alignItems:'center', justifyContent:'center'}}>
-                {
-                  secondRowTitle ?
-                  <Typography variant='caption'>
-                  {secondRowTitle} {<a href={reportLink} style={{fontWeight:'bold', fontSize: 10}}>{secondRowContent}</a>} 
-
-                  {readmeLink ?  <span>|<a href={readmeLink} style={{fontWeight:'bold', fontSize: 10}}>{thirdRowContent}</a></span>  : ""}
-
-                </Typography>
-                  :
-                  "" 
-                }
-              </div>
-              <div style={{display: 'flex', flexDirection: 'row', alignItems:'center', justifyContent:'center'}}>
-                {
-                  thirdRowTitle ?
-                  <Typography variant='caption'>
-                  {thirdRowTitle} {<a href={invisionLink} style={{fontWeight:'bold', fontSize: 10}}>{thirdRowContent}</a>} 
-
-                </Typography>
-                  :
-                  "" 
-                }
-              </div> */}
-              
+              {icon}            
               </CardContent>
 
 
@@ -348,12 +310,6 @@ function Home() {
             </ParallaxBox>
           </Box>
 
-          {/* <div className={styles.videoFrame}>
-            <iframe width="640" height="360" src="https://www.youtube.com/embed/cvilv2km4kE" 
-            frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowFullScreen className={styles.video}></iframe>
-          </div> */}
-
           <div className={styles.videoFrame}> 
             <video width="640" height="360" controls className={styles.video}>
               <source src={useBaseUrl("assets/concept-video-compressed.mp4")} type="video/mp4"/>
@@ -374,15 +330,8 @@ function Home() {
           </div>
 
           <Box>
-          <img src={"img/newest_version.png"} style={{maxHeight: '400px', marginLeft: '20%', marginTop:"10%", overflow:'hidden', display: 'inline'}}/>
-        
+          <img src={"img/newest_version.png"} style={{maxHeight: '400px', marginLeft: '20%', marginTop:"10%", overflow:'hidden', display: 'inline'}}/>     
           </Box>
-
-          {/* <div className={styles.videoFrame} style={{backgroundImage: "url(img/plain_orb.png)", backgroundRepeat: "no-repeat", backgroundPosition:"center", backgroundSize:"110%", justifyContent: 'center', alignItems: 'center', display: 'flex', flexDirection: 'column'}}> 
-            <video width="426" height="240" controls className={styles.video}>
-              <source src={useBaseUrl("assets/concept-video-compressed.mp4")} type="video/mp4"/>
-            </video>
-          </div> */}
 
           <Box>
           <img src={"img/next_orb.png"} style={{maxHeight: '400px', marginLeft: '55%'}}/>
@@ -398,14 +347,11 @@ function Home() {
                 Explore voices everywhere 
               </Typography>
               <Box>
-              <form action='https://www.figma.com/proto/d1azqt8OHaDjVIs11hnwG9/Full-Medium-Fi-Prototype?node-id=88%3A9695&scaling=scale-down'>
+              <form action='https://www.figma.com/proto/d1azqt8OHaDjVIs11hnwG9/Full-Medium-Fi-Prototype?scaling=scale-down&node-id=88%3A9695'>
                 <Button type="submit" variant="contained" style={{backgroundColor: "#25c2a0", color: "white", fontWeight: 800, width: '33%', fontSize: 18, borderRadius: 25}}>
                   Try our prototype
                 </Button>
               </form>
-                {/* <Button variant="contained" style={{backgroundColor: "#25c2a0", color: "white", fontWeight: 800, width: '33%', fontSize: 18, borderRadius: 25}} >
-                  Try our prototype
-                </Button> */}
               </Box>
             </Box>
             <Box>
@@ -413,14 +359,6 @@ function Home() {
             </Box>
           </Box>
 
-          {/* <Typography>
-            Try our prototype
-          </Typography> */}
-
-          {/* <Box height="400px" className="mainIframeContainer" align="center">
-          <iframe width="40" height="475" 
-          src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fd1azqt8OHaDjVIs11hnwG9%2FFull-Medium-Fi-Prototype%3Fscaling%3Dmin-zoom%26node-id%3D88%253A9695" allowfullscreen></iframe>
-          </Box> */}
           <Box style={{paddingTop: '5%'}}>
             <Typography variant="h2" component="h2" align="center" gutterBottom>Our Team</Typography>
             {features && features.length > 0 && (
