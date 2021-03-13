@@ -15,6 +15,7 @@ import {
   IntersectionObserver,
   Feature,
   FadeBox,
+  ScaleBox,
 } from '../components'
 import ExploreIcon from '@material-ui/icons/Explore';
 import PeopleIcon from '@material-ui/icons/People';
@@ -24,6 +25,8 @@ import AccountTreeIcon from '@material-ui/icons/AccountTree';
 import AssignmentIcon from '@material-ui/icons/Assignment';
 import PhoneIphoneIcon from '@material-ui/icons/PhoneIphone';
 import ImportantDevicesIcon from '@material-ui/icons/ImportantDevices';
+import { TrainRounded } from '@material-ui/icons';
+import { StoryOrb } from '../components/story-orb';
 
 const features = [
   {
@@ -144,10 +147,13 @@ function Home() {
   const {siteConfig = {}} = context;
   const topGradientRef = useRef();
   const [windowHeight, setWindowHeight] = useState(900);
+  // const [windowWidth, setWindowWidth] = useState(1400);
 
   useEffect(() => {
     const changeWindowHeight = window ? window.innerHeight : 900;
-    setWindowHeight(changeWindowHeight)
+    // const changeWindowWidth = window ? window.innerWidth : 1400;
+    setWindowHeight(changeWindowHeight);
+    // setWindowHeight(changeWindowWidth);
   }, [])
 
   const firstTransitionRange = [0, windowHeight/3]
@@ -160,7 +166,7 @@ function Home() {
         >
           <FadeBox
             childRef={topGradientRef}
-            scrollInputRange={[...firstTransitionRange, windowHeight+400, windowHeight+600]}
+            scrollInputRange={[...firstTransitionRange, windowHeight+100, windowHeight+400]}
             opacityOutputRange={[0.2, 0.8, 0.8, 0]}
           >
             <img
@@ -202,24 +208,69 @@ function Home() {
             </ParallaxBox>
           </Box>
 
-          <div className={styles.videoFrame}> 
+          <Box height={`200px`}/>
+
+          <Box height={`${windowHeight}px`}>
+            <IntersectionObserver reset={true}>
+              <StoryOrb className={styles.storyPOFA}
+                imageSource={'img/pofa.png'}
+                audioFilePath={useBaseUrl('audio/swans-at-the-palace.mp3')}
+                title={'The Swans at the Palace of Fine Arts'}
+                oneImage
+              />
+            </IntersectionObserver>
+            <IntersectionObserver reset={true}>
+              <StoryOrb className={styles.storyGoldenGate}
+                imageSource={'img/golden-gate-bridge.png'}
+                audioFilePath={useBaseUrl('audio/golden-gate-howl.mp3')}
+                title={'Does the Golden Gate Bridge Howl?'}
+                oneImage
+              />
+            </IntersectionObserver>
+            <IntersectionObserver reset={true}>
+              <StoryOrb className={styles.storyOceanBeach}
+                imageSource={'img/ocean-beach-fog-burn.jpeg'}
+                title={'Flying Discs at Ocean Beach "Fog Burn"'}
+                audioFilePath={useBaseUrl('audio/ocean-beach-fog-burn.mp3')}
+              />
+            </IntersectionObserver>
+            <IntersectionObserver reset={true}>
+              <StoryOrb className={styles.saintStupid}
+                imageSource={'img/saint-stupid.jpeg'}
+                title={'Saint Stupid\'s Parade on Market Street'}
+                audioFilePath={useBaseUrl('audio/parade-krishnan.mp3')}
+              />
+            </IntersectionObserver>
+            <IntersectionObserver reset={true}>
+              <StoryOrb className={styles.storyCrossroads}
+                imageSource={'img/crossroadsThrift.png'}
+                title={'Crossroads Thrifting in the Fillmore'}
+                oneImage
+                audioFilePath={useBaseUrl('audio/crossroadsStory.mp3')}
+              />
+            </IntersectionObserver>
+          </Box>
+
+          <Box height={`100px`}/>
+
+          <Box className={styles.videoFrame}> 
             <video width="640" height="360" controls className={styles.video}>
               <source src={useBaseUrl("assets/concept-video-compressed.mp4")} type="video/mp4"/>
             </video>
 
             <Box>
-                <form action="https://www.youtube.com/embed/cvilv2km4kE" style={{display:"inline"}}>
+              <form action="https://www.youtube.com/embed/cvilv2km4kE" style={{display:"inline"}}>
                 <Button type="submit" variant="contained" style={{backgroundColor: "#25c2a0", color: "white", fontWeight: 800, width: '10%', fontSize: 12, borderRadius: 25}}>
                   Watch on Youtube
                 </Button>
-                </form>
-                <form method="get" action={useBaseUrl("assets/concept-video-compressed.mp4")} style={{display:"inline"}}>
+              </form>
+              <form method="get" action={useBaseUrl("assets/concept-video-compressed.mp4")} style={{display:"inline"}}>
                 <Button type="submit" variant="contained" style={{backgroundColor: "#25c2a0", color: "white", fontWeight: 800, width: '10%', fontSize: 12, borderRadius: 25, margin: '1%'}}>
                   Download
                 </Button>
-                </form>
+              </form>
+            </Box>
           </Box>
-          </div>
 
           <Box>
             <img src={"img/exploring-new-cultures.png"} style={{maxHeight: '400px', marginLeft: '20%', marginTop:"10%", overflow:'hidden', display: 'inline'}}/>     
@@ -258,7 +309,7 @@ function Home() {
           <Box style={{paddingTop: '5%'}}>
             <Typography variant="h2" component="h2" align="center" gutterBottom>Our Team</Typography>
             {features && features.length > 0 && (
-              <IntersectionObserver>
+              <IntersectionObserver reset={true}>
                 <section className={styles.features}>
                   <div className="container">
                     <div className="row">
