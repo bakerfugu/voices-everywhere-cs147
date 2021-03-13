@@ -212,6 +212,14 @@ function Home() {
 
           <Box height={`${windowHeight}px`}>
             <IntersectionObserver reset={true}>
+              <StoryOrb className={styles.storyCrossroads}
+                imageSource={'img/crossroadsThrift.png'}
+                title={'Crossroads Thrifting in the Fillmore'}
+                oneImage
+                audioFilePath={useBaseUrl('audio/crossroadsStory.mp3')}
+              />
+            </IntersectionObserver>
+            <IntersectionObserver reset={true}>
               <StoryOrb className={styles.storyPOFA}
                 imageSource={'img/pofa.png'}
                 audioFilePath={useBaseUrl('audio/swans-at-the-palace.mp3')}
@@ -239,14 +247,6 @@ function Home() {
                 imageSource={'img/saint-stupid.jpeg'}
                 title={'Saint Stupid\'s Parade on Market Street'}
                 audioFilePath={useBaseUrl('audio/parade-krishnan.mp3')}
-              />
-            </IntersectionObserver>
-            <IntersectionObserver reset={true}>
-              <StoryOrb className={styles.storyCrossroads}
-                imageSource={'img/crossroadsThrift.png'}
-                title={'Crossroads Thrifting in the Fillmore'}
-                oneImage
-                audioFilePath={useBaseUrl('audio/crossroadsStory.mp3')}
               />
             </IntersectionObserver>
           </Box>
