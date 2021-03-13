@@ -5,25 +5,17 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import Layout from '@theme/Layout';
 import styles from './styles.module.css';
-
 import {
   Typography,
   Box,
-  Card,
-  CardHeader,
-  CardContent, 
   Button, 
-  CardMedia,
-  Container
 } from '@material-ui/core';
-
 import {
   ParallaxBox,
   IntersectionObserver,
-  ScaleBox,
+  Feature,
   FadeBox,
 } from '../components'
-import Icon from "@material-ui/core/Icon";
 import ExploreIcon from '@material-ui/icons/Explore';
 import PeopleIcon from '@material-ui/icons/People';
 import MovieCreationIcon from '@material-ui/icons/MovieCreation';
@@ -78,15 +70,6 @@ const assignmentLinksFirstRow = [
     icon: <PeopleIcon style={{fontSize: '45px', fill: "black"}}/>,
   },
   {
-    // title: 'Concept Video',
-    // linkTo: '/docs/concept-video',
-    // presentationGoogle: 'Watch',
-    // contentTitle: 'Video:',
-    // presentationGoogleLink: 'assets/concept-video-compressed.mp4',
-    // presentationGoogle: 'Watch',
-    // contentTitle: 'Video:',
-    // presentationGoogleLink: 'assets/concept-video-compressed.mp4',
-
     title: 'Concept Video',
     linkTo: '/docs/concept-video',
     contentTitle: 'Presentation:',
@@ -156,102 +139,11 @@ const assignmentLinksSecondRow = [
 ];
 
 
-function Feature({imageUrl, title, descriptionA, descriptionB, delay, linkTo, secondRowContent, reportLink, secondRowTitle, contentTitle, presentationGoogle, presentationGoogleLink, pdfLink, thirdRowContent, thirdRowTitle, invisionLink, readmeLink, icon}) {
-  const imgUrl = useBaseUrl(imageUrl);
-  const featureContents = (
-    <div>
-      {imgUrl && (
-        <div className="text--center">
-          <img className={styles.featureImage} src={imgUrl} alt={title} />
-        </div>
-      )}
-      <Typography variant="h5" component="h4" align="center" gutterBottom>{title}</Typography>
-        <div style={{textAlign:'center', alignItems: 'center'}}>
-        <span>{descriptionA}         
-        {
-          descriptionB ?
-            <span><span style={{fontWeight: '800', color: '#1DDBB5'}}> x </span>{descriptionB} </span>
-          :
-          ""
-        }</span> 
-        </div>
-    </div>
-  )
-  return (
-    <div className={clsx('col col--3', styles.feature)}>
-      { delay ?
-          <ScaleBox delayOrder={delay}>
-            {featureContents}
-          </ScaleBox>
-        : linkTo ? 
-            <div>
-            <CardContent className={styles.assignmentCardContent} style={{backgroundImage: "url(img/orb3.png)", backgroundRepeat: "no-repeat", backgroundPosition:"center", backgroundSize:"110%", justifyContent: 'center', alignItems: 'center', display: 'flex', flexDirection: 'column'}} >
-            <Link to={linkTo}>
-              <CardHeader
-                title = {title}
-                titleTypographyProps={{align: "center"}}
-                className={styles.assignmentCardTitle}
-              />
-              </Link>
-              {icon}            
-              </CardContent>
-
-
-              <div style={{display: 'flex', flexDirection: 'row', alignItems:'center', justifyContent:'center'}}>
-              {
-                  contentTitle === 'Video:' || contentTitle === 'Report:' ?
-                  <Typography variant="subtitle1">
-                  {contentTitle} {<a href={presentationGoogleLink} style={{fontWeight:'bold', fontSize: 16}}>{presentationGoogle}</a>} 
-                </Typography>
-                  :
-                <Typography variant="subtitle1">
-                  {contentTitle} {<a href={presentationGoogleLink} style={{fontWeight:'bold', fontSize: 16}}>{presentationGoogle}</a>} | {<a href={pdfLink} style={{fontWeight:'bold'}}>PDF</a>}
-                </Typography>
-              }
-            </div>
-            <div style={{display: 'flex', flexDirection: 'row', alignItems:'center', justifyContent:'center'}}>
-              {
-                secondRowTitle ?
-                <Typography variant="subtitle1">
-                {secondRowTitle} {<a href={reportLink} style={{fontWeight:'bold', fontSize: 16}}>{secondRowContent}</a>} 
-
-                {readmeLink ?  <span>|<a href={readmeLink} style={{fontWeight:'bold', fontSize: 16}}>{thirdRowContent}</a></span>  : ""}
-
-              </Typography>
-                :
-                "" 
-              }
-            </div>
-            <div style={{display: 'flex', flexDirection: 'row', alignItems:'center', justifyContent:'center'}}>
-              {
-                thirdRowTitle ?
-                <Typography>
-                {thirdRowTitle} {<a href={invisionLink} style={{fontWeight:'bold', fontSize: 16}}>{thirdRowContent}</a>} 
-
-              </Typography>
-                :
-                "" 
-              }
-            </div>
-            </div>
-
-             
-            
-        :
-        {featureContents}
-      }
-    </div>
-  );
-}
-
 function Home() {
   const context = useDocusaurusContext();
   const {siteConfig = {}} = context;
   const topGradientRef = useRef();
-
   const [windowHeight, setWindowHeight] = useState(900);
-
-  const [chosen, setChosen] = useState(1);
 
   useEffect(() => {
     const changeWindowHeight = window ? window.innerHeight : 900;
@@ -268,23 +160,23 @@ function Home() {
         >
           <FadeBox
             childRef={topGradientRef}
-            scrollInputRange={firstTransitionRange}
-            opacityOutputRange={[1, 0]}
-          >
-            <div
-              ref={topGradientRef}
-              className={styles.bgYellowGradient}
-            />
-          </FadeBox>
-          <FadeBox
-            childRef={topGradientRef}
-            scrollInputRange={[...firstTransitionRange, windowHeight+400,windowHeight+600]}
+            scrollInputRange={[...firstTransitionRange, windowHeight+400, windowHeight+600]}
             opacityOutputRange={[0.2, 0.8, 0.8, 0]}
           >
             <img
               ref={topGradientRef}
               src={useBaseUrl("img/Maps-Big-Screenshot-ColorFaded.png")}
               className={styles.bgImg}
+            />
+          </FadeBox>
+          <FadeBox
+            childRef={topGradientRef}
+            scrollInputRange={firstTransitionRange}
+            opacityOutputRange={[1, 0]}
+          >
+            <div
+              ref={topGradientRef}
+              className={styles.bgYellowGradient}
             />
           </FadeBox>
         </div>
@@ -302,7 +194,7 @@ function Home() {
               <div className={styles.heroBanner}>
                 <img
                   alt="Voices text logo"
-                  src={useBaseUrl('img/voicesLogo.png')}
+                  src={useBaseUrl('img/voicesTextLogo.png')}
                   width={"40%"}
                 />
                 <p className="hero__subtitle">{siteConfig.tagline}</p>
@@ -330,15 +222,13 @@ function Home() {
           </div>
 
           <Box>
-          <img src={"img/newest_version.png"} style={{maxHeight: '400px', marginLeft: '20%', marginTop:"10%", overflow:'hidden', display: 'inline'}}/>     
+            <img src={"img/exploring-new-cultures.png"} style={{maxHeight: '400px', marginLeft: '20%', marginTop:"10%", overflow:'hidden', display: 'inline'}}/>     
           </Box>
-
           <Box>
-          <img src={"img/next_orb.png"} style={{maxHeight: '400px', marginLeft: '55%'}}/>
+            <img src={"img/share-and-listen.png"} style={{maxHeight: '400px', marginLeft: '55%'}}/>
           </Box>
-
           <Box>
-          <img src={"img/final_orb.png"} style={{maxHeight: '400px', marginLeft: '30%', marginBottom: "10%"}}/>
+            <img src={"img/follow-the-voices.png"} style={{maxHeight: '400px', marginLeft: '30%', marginBottom: "10%"}}/>
           </Box>
           
           <Box style={{display: 'flex', flexDirection: 'row', justifyContent: "space-evenly"}}>
@@ -347,15 +237,21 @@ function Home() {
                 Explore voices everywhere 
               </Typography>
               <Box>
-              <form action='https://www.figma.com/proto/d1azqt8OHaDjVIs11hnwG9/Full-Medium-Fi-Prototype?scaling=scale-down&node-id=88%3A9695'>
-                <Button type="submit" variant="contained" style={{backgroundColor: "#25c2a0", color: "white", fontWeight: 800, width: '33%', fontSize: 18, borderRadius: 25}}>
-                  Try our prototype
-                </Button>
-              </form>
+                {/* <form action='https://www.figma.com/proto/7b9U2zKH8v3bCp4Zlp6iau/PREVIEW-ONLY-FOR-SLIDES-DO-NOT-EDIT?node-id=88%3A9695&scaling=scale-down'> */}
+                <a 
+                  href="https://www.figma.com/proto/7b9U2zKH8v3bCp4Zlp6iau/PREVIEW-ONLY-FOR-SLIDES-DO-NOT-EDIT?node-id=88%3A9695&scaling=scale-down"
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  <Button type="submit" variant="contained" style={{backgroundColor: "#25c2a0", color: "white", fontWeight: 800, width: '33%', fontSize: 18, borderRadius: 25}}>
+                    Try our prototype
+                  </Button>
+                </a>
+                {/* </form> */}
               </Box>
             </Box>
             <Box>
-            <img src={"img/demo.png"} size="large" style={{maxHeight: '550px', marginLeft: "-20%"}}/>
+              <img src={"img/demo.png"} size="large" style={{maxHeight: '550px', marginLeft: "-20%"}}/>
             </Box>
           </Box>
 
@@ -400,17 +296,6 @@ function Home() {
                 </div>
               </section>
             )}
-            {/* <Box style={{display:"flex", flexDirection: 'row', justifyContent: "space-evenly", marginLeft: '10%', marginRight: '10%'}}>
-            <Button variant="outlined" style={{borderColor: "#25c2a0", border:"2 solid #25c2a0", backgroundColor: "white", borderWidth: 2, color: "black", fontWeight: 500, fontSize: 14, borderRadius: 15}} onClick={()=> setChosen(1)}>Needfinding</Button>
-            <Button variant="outlined" style={{borderColor: "#25c2a0", border:"2 solid #25c2a0", backgroundColor: "white", borderWidth: 2, color: "black", fontWeight: 500, fontSize: 14, borderRadius: 15}} onClick={()=> setChosen(2)}>Needfinding</Button>
-            <Button variant="outlined" style={{borderColor: "#25c2a0", border:"2 solid #25c2a0", backgroundColor: "white", borderWidth: 2, color: "black", fontWeight: 500, fontSize: 14, borderRadius: 15}} onClick={()=> setChosen(1)}>Needfinding</Button>
-            <Button variant="outlined" style={{borderColor: "#25c2a0", border:"2 solid #25c2a0", backgroundColor: "white", borderWidth: 2, color: "black", fontWeight: 500, fontSize: 14, borderRadius: 15}}>Needfinding</Button>
-            <Button variant="outlined" style={{borderColor: "#25c2a0", border:"2 solid #25c2a0", backgroundColor: "white", borderWidth: 2, color: "black", fontWeight: 500, fontSize: 14, borderRadius: 15}}>Needfinding</Button>
-            <Button variant="outlined" style={{borderColor: "#25c2a0", border:"2 solid #25c2a0", backgroundColor: "white", borderWidth: 2, color: "black", fontWeight: 500, fontSize: 14, borderRadius: 15}}>Needfinding</Button>
-            <Button variant="outlined" style={{borderColor: "#25c2a0", border:"2 solid #25c2a0", backgroundColor: "white", borderWidth: 2, color: "black", fontWeight: 500, fontSize: 14, borderRadius: 15}}>Needfinding</Button>
-            <Button variant="outlined" style={{borderColor: "#25c2a0", border:"2 solid #25c2a0", backgroundColor: "white", borderWidth: 2, color: "black", fontWeight: 500, fontSize: 14, borderRadius: 15}}>Needfinding</Button>
-            </Box> */}
-
           </Box>
           <Box height="200px"/>
         </div>
