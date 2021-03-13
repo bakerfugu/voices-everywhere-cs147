@@ -23,12 +23,19 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 ## Presentation
 
-<a
-  target="_blank"
-  href={useBaseUrl("assets/Assignment-3-Concept-Video.pdf")}>
-
-  Presentation PDF
-
-</a>
+<p>
+  {`Download: `}
+  <a
+    target="_blank"
+    href={useBaseUrl("assets/Assignment-3-Concept-Video.pdf")}>
+    PDF
+  </a>
+  {` | `}
+  <a
+    target="_blank"
+    href={useBaseUrl("assets/Assignment-3-Concept-Video.pptx")}>
+    PPTX
+  </a>
+</p>
 
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vS71He-EQBzy0VoKtOQTxEnmK3J8wP7_3utUdRNa1HDXOh2ACf3iHFCkpAgR3Z8TVXGubrDthLbLil8/embed?start=false&loop=false&delayms=60000" frameborder="0" width="640" height="360" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>

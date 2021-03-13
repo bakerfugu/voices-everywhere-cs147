@@ -44,12 +44,19 @@ Make sure you can find each of these "pages":
 
 ## Presentation
 
-<a
-  target="_blank"
-  href={useBaseUrl("assets/Med-Fi-Prototype.pdf")}>
-
-  Medium-Fi Prototype Slides
-
-</a>
+<p>
+  {`Download: `}
+  <a
+    target="_blank"
+    href={useBaseUrl("assets/Med-Fi-Prototype.pdf")}>
+    PDF
+  </a>
+  {` | `}
+  <a
+    target="_blank"
+    href={useBaseUrl("assets/Assignment-6-Med-Fi-Prototype.pptx")}>
+    PPTX
+  </a>
+</p>
 
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vR07FImy8FRLr-P1PmkNYtsf1guJScep0iFK3M37DCy8BD_BOLd4R9hiJWxbBgX2zkreJDhtMlQI75y/embed?start=false&loop=false&delayms=60000" frameborder="0" width="640" height="360" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
