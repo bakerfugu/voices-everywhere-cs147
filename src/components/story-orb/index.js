@@ -2,10 +2,6 @@ import React, { useState, useRef, useEffect, forwardRef } from 'react';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useBaseUrl from '@docusaurus/useBaseUrl';
-import useSound from 'use-sound';
-
-import PauseButton from '@site/static/img/pause-button.svg';
-import PlayButton from '@site/static/img/play-button.svg';
 
 import {
   Typography
@@ -71,8 +67,8 @@ const StoryPopover = forwardRef((props, ref) => {
   return (
     <div className={styles.biggerStory} ref={ref}>
       <ScaleBox
-        delayStart={0}
-        duration={0.2}
+        delayStart={0.1}
+        duration={0.5}
       >
         <img
           alt="Orb background"
@@ -128,18 +124,20 @@ export function StoryOrb({
           stopIt={!showingStory}
         />
       :
-        <ScaleBox
-          delayStart={0}
-          duration={0.4}
-          className={styles.smallStoryOrb}
-          onClick={() => setShowingStory(true)}
-        >
-          <SmallFloatingStory
-            backgroundOrbSource={backgroundOrbSource}
-            oneImage={oneImage}
-            imageSource={imageSource}
-          />
-        </ScaleBox>
+        <div className={styles.smallerStory}>
+          <ScaleBox
+            delayStart={0.1}
+            duration={1}
+            // className={styles.smallStoryOrb}
+            onClick={() => setShowingStory(true)}
+          >
+            <SmallFloatingStory
+              backgroundOrbSource={backgroundOrbSource}
+              oneImage={oneImage}
+              imageSource={imageSource}
+            />
+          </ScaleBox>
+        </div>
       }
     </div>
   );

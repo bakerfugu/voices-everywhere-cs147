@@ -11,19 +11,18 @@
   position: fixed;
 }
 
-.smallStoryOrb {
-  z-index: 2;
-}
-
 .smallStoryOrb:hover {
   cursor: pointer;
+}
+
+.smallerStory {
+  position: fixed;
 }
 
 .biggerStory {
   position: fixed;
   top: calc(50vh - 200px);
   left: calc(50vw - 200px);
-  z-index: 3;
 }
 
 .storyContent {
