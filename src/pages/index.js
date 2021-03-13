@@ -167,7 +167,7 @@ function Home() {
           <FadeBox
             childRef={topGradientRef}
             scrollInputRange={[...firstTransitionRange, windowHeight+100, windowHeight+400]}
-            opacityOutputRange={[0.2, 0.8, 0.8, 0]}
+            opacityOutputRange={[0.2, 0.9, 0.9, 0.2]}
           >
             <img
               ref={topGradientRef}
@@ -238,7 +238,7 @@ function Home() {
             <IntersectionObserver reset={true}>
               <StoryOrb className={styles.storyOceanBeach}
                 imageSource={'img/ocean-beach-fog-burn.jpeg'}
-                title={'Flying Discs at Ocean Beach "Fog Burn"'}
+                title={'Flying Discs at Ocean Beach\'s "Fog Burn"'}
                 audioFilePath={useBaseUrl('audio/ocean-beach-fog-burn.mp3')}
               />
             </IntersectionObserver>

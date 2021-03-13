@@ -102,11 +102,9 @@ export function StoryOrb({
   oneImage = false,
   ...rest
 }) {
-  // 'audio/parade-krishnan.mp3'
   const [showingStory, setShowingStory] = useState(false);
   const popoverRef = useRef(null);
   useOutsideAlerter(popoverRef, setShowingStory);
-  // img/baker-face.png
   const backgroundOrbSource = oneImage ? imageSource : 'img/orb-yellow-background.png';
 
   return (
@@ -127,8 +125,8 @@ export function StoryOrb({
         <div className={styles.smallerStory}>
           <ScaleBox
             delayStart={0.1}
-            duration={1}
-            // className={styles.smallStoryOrb}
+            duration={0.6}
+            className={styles.smallStoryOrb}
             onClick={() => setShowingStory(true)}
           >
             <SmallFloatingStory

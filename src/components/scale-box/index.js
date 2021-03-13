@@ -34,8 +34,6 @@ export const ScaleBox = ({
     }
   };
 
-  console.log("animating maybe:", inView);
-
   return (
     <motion.div
       initial="hidden"
