@@ -5,7 +5,11 @@ title: Group Heuristic Evaluation
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-## Heuristic Eval Report
+## Overview
+
+We had our Medium-Fi prototype evaluated by several classmates. They described our app as: "Voices, an app that allows users to immerse themselves in a location’s culture by listening to user-uploaded stories about that location, browse stories both local and remote, and record and upload their own stories."
+
+### Heuristic Eval Report
 
 <a
   target="_blank"
@@ -15,13 +19,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 </a>
 
-## Results
-
-### Overview
-
-We had our Medium-Fi prototype evaluated by several classmates. They described our app as: "Voices, an app that allows users to immerse themselves in a location’s culture by listening to user-uploaded stories about that location, browse stories both local and remote, and record and upload their own stories."
-
-### Violation Numbers
+## Violation Numbers
 
 * **32** total violations
 * **6** violations with severity 4
@@ -31,7 +29,7 @@ We had our Medium-Fi prototype evaluated by several classmates. They described o
 
 Our most common violations were: Visibility of System Status (**6**), Error Prevention (**6**)
 
-### Summary Recommendations
+## Summary Recommendations
 
 We received the following general recommendations:
 
