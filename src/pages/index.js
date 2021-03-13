@@ -200,8 +200,8 @@ function Home() {
               <div className={styles.heroBanner}>
                 <img
                   alt="Voices text logo"
-                  src={useBaseUrl('img/voicesTextLogo.png')}
-                  width={"40%"}
+                  src={useBaseUrl('img/voicesLogoFixed.png')}
+                  width={"400px"}
                 />
                 <p className="hero__subtitle">{siteConfig.tagline}</p>
               </div>
@@ -214,7 +214,7 @@ function Home() {
             <IntersectionObserver reset={true}>
               <StoryOrb className={styles.storyCrossroads}
                 imageSource={'img/crossroadsThrift.png'}
-                title={'Crossroads Thrifting in the Fillmore'}
+                title={'Thrifting at Crossroads in the Fillmore'}
                 oneImage
                 audioFilePath={useBaseUrl('audio/crossroadsStory.mp3')}
               />
@@ -261,7 +261,7 @@ function Home() {
             <Box>
               <form action="https://www.youtube.com/embed/cvilv2km4kE" style={{display:"inline"}}>
                 <Button type="submit" variant="contained" style={{backgroundColor: "#25c2a0", color: "white", fontWeight: 800, width: '10%', fontSize: 12, borderRadius: 25}}>
-                  Watch on Youtube
+                  YouTube
                 </Button>
               </form>
               <form method="get" action={useBaseUrl("assets/concept-video-compressed.mp4")} style={{display:"inline"}}>
@@ -279,7 +279,7 @@ function Home() {
             <img src={"img/share-and-listen.png"} style={{maxHeight: '400px', marginLeft: '55%'}}/>
           </Box>
           <Box>
-            <img src={"img/follow-the-voices.png"} style={{maxHeight: '400px', marginLeft: '30%', marginBottom: "10%"}}/>
+            <img src={"img/follow-the-voices.png"} style={{maxHeight: '400px', marginLeft: '33%', marginBottom: "10%"}}/>
           </Box>
           
           <Box style={{display: 'flex', flexDirection: 'row', justifyContent: "space-evenly"}}>
