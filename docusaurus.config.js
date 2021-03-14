@@ -2,12 +2,12 @@ module.exports = {
   title: 'Voices',
   tagline: 'cultural immersion by discovering personal stories',
   // Url options to deploy to github pages
-  url: 'https://bakerfugu.github.io',
-  baseUrl: '/voices-everywhere-cs147/',
+  // url: 'https://bakerfugu.github.io',
+  // baseUrl: '/voices-everywhere-cs147/',
 
   // Url options to deploy to stanford myth server
-  // url: 'http://web.stanford.edu',
-  // baseUrl: '/class/cs147/projects/ArtsandCulture/Voices/',
+  url: 'http://web.stanford.edu',
+  baseUrl: '/class/cs147/projects/ArtsandCulture/Voices/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.svg',
