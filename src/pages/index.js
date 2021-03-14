@@ -296,7 +296,7 @@ function Home() {
               <Box>
                 {/* <form action='https://www.figma.com/proto/7b9U2zKH8v3bCp4Zlp6iau/PREVIEW-ONLY-FOR-SLIDES-DO-NOT-EDIT?node-id=88%3A9695&scaling=scale-down'> */}
                 <a 
-                  href="https://www.figma.com/proto/7b9U2zKH8v3bCp4Zlp6iau/PREVIEW-ONLY-FOR-SLIDES-DO-NOT-EDIT?node-id=88%3A9695&scaling=scale-down"
+                  href="https://www.figma.com/proto/d1azqt8OHaDjVIs11hnwG9/Full-Medium-Fi-Prototype?node-id=88%3A9695&scaling=scale-down"
                   target="_blank" 
                   rel="noopener noreferrer"
                 >
