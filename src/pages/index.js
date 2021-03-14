@@ -30,23 +30,23 @@ import { StoryOrb } from '../components/story-orb';
 
 const features = [
   {
-    title: 'Ayelet Drazen',
+    title: 'Ayelet D',
     imageUrl: 'img/ayelet-face.png',
     descriptionA: "UI/UX Designer",
     descriptionB: "Researcher"
   },
   {
-    title: 'Baker Sharp',
+    title: 'Baker S',
     imageUrl: 'img/baker-face.png',
     descriptionA: "Lead Web Developer",
   },
   {
-    title: 'Krishnan Nair',
+    title: 'Krishnan N',
     imageUrl: 'img/krishnan-face.png',
     descriptionA: "Lead Mobile Developer",
   },
   {
-    title: 'Taylor Lallas',
+    title: 'Taylor L',
     imageUrl: 'img/taylor-face.png',
     descriptionA: "UI/UX Designer",
     descriptionB: "Developer",
@@ -60,7 +60,8 @@ const assignmentLinksFirstRow = [
     presentationGoogle: 'Slides',
     contentTitle: 'Presentation:',
     pdfLink: 'assets/Needfinding-Presentation.pdf',
-    presentationGoogleLink: "https://docs.google.com/presentation/d/e/2PACX-1vSFZ-Bbo51DCxwaYvyaR5cs9vYJ899ftWpomf6KkOhsACTS7Zo3R7xGmz3NSJ3TK1WYf8t5S_exNgNZ/embed?start=false&loop=false&delayms=60000",
+    presentationGoogleLink: "assets/Assignment-1-Needfinding.pptx", 
+    //presentationGoogleLink: "https://docs.google.com/presentation/d/e/2PACX-1vSFZ-Bbo51DCxwaYvyaR5cs9vYJ899ftWpomf6KkOhsACTS7Zo3R7xGmz3NSJ3TK1WYf8t5S_exNgNZ/embed?start=false&loop=false&delayms=60000",
     icon: <ExploreIcon style={{fontSize: '45px', fill: "black"}}/>, 
   },
   {
@@ -68,7 +69,8 @@ const assignmentLinksFirstRow = [
     linkTo: '/docs/pov-and-experience-prototyping',
     contentTitle: 'Presentation:',
     presentationGoogle: 'Slides',
-    presentationGoogleLink: "https://docs.google.com/presentation/d/e/2PACX-1vSKZ1Y48CPC1z6i__WhkrksVQELiEe74JnfkQgiLajUwP2r4JXUlhMIHHd-aNvEuCpTUiUnxYPXCUG7/pub?start=false&loop=false&delayms=30000",
+    presentationGoogleLink: "assets/Assignment-2-Prototyping.pptx", 
+    //presentationGoogleLink: "https://docs.google.com/presentation/d/e/2PACX-1vSKZ1Y48CPC1z6i__WhkrksVQELiEe74JnfkQgiLajUwP2r4JXUlhMIHHd-aNvEuCpTUiUnxYPXCUG7/pub?start=false&loop=false&delayms=30000",
     pdfLink: 'assets/Assignment-2-Prototyping.pdf',
     icon: <PeopleIcon style={{fontSize: '45px', fill: "black"}}/>,
   },
@@ -81,7 +83,8 @@ const assignmentLinksFirstRow = [
     presentationGoogle: 'Slides',
     reportLink: 'assets/concept-video-compressed.mp4',
     pdfLink: 'assets/Assignment-3-Concept-Video.pdf',
-    presentationGoogleLink: "https://docs.google.com/presentation/d/e/2PACX-1vTJwx_QP3RxM-eR4Hhol-XF56YwjdZPDbe_yGxCtxrc3UEVFqZ6J4qmNdCetdZpABWW2Wu8ykt-OjBM/embed?start=true&loop=false&delayms=3000",
+    presentationGoogleLink: "assets/Assignment-3-Concept-Video.pptx", 
+    //presentationGoogleLink: "https://docs.google.com/presentation/d/e/2PACX-1vTJwx_QP3RxM-eR4Hhol-XF56YwjdZPDbe_yGxCtxrc3UEVFqZ6J4qmNdCetdZpABWW2Wu8ykt-OjBM/embed?start=true&loop=false&delayms=3000",
     icon: <MovieCreationIcon style={{fontSize: '45px', fill: "black"}}/>,
   },
   {
@@ -96,7 +99,8 @@ const assignmentLinksFirstRow = [
     thirdRowContent: 'Invision',
     invisionLink: 'https://projects.invisionapp.com/share/AP105Q3ADW7G#/screens',
     pdfLink: 'assets/Low-Fi-Protoype-Presentation.pdf',
-    presentationGoogleLink: "https://docs.google.com/presentation/d/e/2PACX-1vQK4PE-BI_h8kI89HMXFx5XMDSa2ybSwd1cB1j7R4jGugiufNHyERVXYmB-8WW6ARsF6yLn9DSTFnE5/pub?start=false&loop=false&delayms=30000",
+    presentationGoogleLink: "assets/Assignment-5-Low-Fi-Protoype.pptx", 
+    //presentationGoogleLink: "https://docs.google.com/presentation/d/e/2PACX-1vQK4PE-BI_h8kI89HMXFx5XMDSa2ybSwd1cB1j7R4jGugiufNHyERVXYmB-8WW6ARsF6yLn9DSTFnE5/pub?start=false&loop=false&delayms=30000",
     icon: <CreateIcon style={{fontSize: '45px', fill: "black"}}/>,
   },
 ];
@@ -110,7 +114,8 @@ const assignmentLinksSecondRow = [
     secondRowContent: 'Figma ',
     reportLink: 'https://www.figma.com/proto/d1azqt8OHaDjVIs11hnwG9/Full-Medium-Fi-Prototype?scaling=scale-down&node-id=88%3A9695',
     pdfLink: 'assets/Med-Fi-Prototype.pdf',
-    presentationGoogleLink: 'https://docs.google.com/presentation/d/e/2PACX-1vQKDslGJ1R7nP5LD7F0EOcfaZrBNdqpU0CDSwRYskd4um_aZxTReS0hcvzsh2xoUoBqwteJJS3ZRrwh/pub?start=false&loop=false&delayms=30000',
+    presentationGoogleLink: "assets/Assignment-6-Med-Fi-Prototype.pptx",
+    //presentationGoogleLink: 'https://docs.google.com/presentation/d/e/2PACX-1vQKDslGJ1R7nP5LD7F0EOcfaZrBNdqpU0CDSwRYskd4um_aZxTReS0hcvzsh2xoUoBqwteJJS3ZRrwh/pub?start=false&loop=false&delayms=30000',
     thirdRowContent: ' README',
     readmeLink: 'assets/README.pdf',
     icon: <AccountTreeIcon style={{fontSize: '45px', fill: "black"}}/>,
@@ -128,7 +133,8 @@ const assignmentLinksSecondRow = [
     linkTo: '/docs/high-fidelity-prototype',
     contentTitle: 'Presentation:',
     presentationGoogle: 'Slides',
-    presentationGoogleLink: "https://docs.google.com/presentation/d/e/2PACX-1vSDjHpOQfFkacNDTo5_19kzk4qtBXqKptnpYgIkVbBrEtE2SOpPbbIYV98Pz0NLogoqkcnqJwKx9Jbh/pub?start=false&loop=false&delayms=30000",
+    presentationGoogleLink: 'assets/Assignment-8-Hi-Fi-Prototype.pptx', 
+    //presentationGoogleLink: "https://docs.google.com/presentation/d/e/2PACX-1vSDjHpOQfFkacNDTo5_19kzk4qtBXqKptnpYgIkVbBrEtE2SOpPbbIYV98Pz0NLogoqkcnqJwKx9Jbh/pub?start=false&loop=false&delayms=30000",
     icon: <PhoneIphoneIcon style={{fontSize: '45px', fill: "black"}}/>,
   },
   {
@@ -260,12 +266,12 @@ function Home() {
 
             <Box>
               <form action="https://www.youtube.com/embed/cvilv2km4kE" style={{display:"inline"}}>
-                <Button type="submit" variant="contained" style={{backgroundColor: "#25c2a0", color: "white", fontWeight: 800, width: '10%', fontSize: 12, borderRadius: 25}}>
+                <Button type="submit" variant="contained" style={{backgroundColor: "#25c2a0", color: "white", fontWeight: 800, width: '7%', fontSize: 12, borderRadius: 25}}>
                   YouTube
                 </Button>
               </form>
               <form method="get" action={useBaseUrl("assets/concept-video-compressed.mp4")} style={{display:"inline"}}>
-                <Button type="submit" variant="contained" style={{backgroundColor: "#25c2a0", color: "white", fontWeight: 800, width: '10%', fontSize: 12, borderRadius: 25, margin: '1%'}}>
+                <Button type="submit" variant="contained" style={{backgroundColor: "#25c2a0", color: "white", fontWeight: 800, width: '7%', fontSize: 12, borderRadius: 25, margin: '1%'}}>
                   Download
                 </Button>
               </form>
