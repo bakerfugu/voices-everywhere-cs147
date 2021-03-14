@@ -134,6 +134,8 @@ const assignmentLinksSecondRow = [
     contentTitle: 'Presentation:',
     presentationGoogle: 'Slides',
     presentationGoogleLink: 'assets/Assignment-8-Hi-Fi-Prototype.pptx', 
+    secondRowContent: 'PDF',
+    pdfLink: 'assets/Assignment-8-Hi-Fi-Prototype.pdf',
     //presentationGoogleLink: "https://docs.google.com/presentation/d/e/2PACX-1vSDjHpOQfFkacNDTo5_19kzk4qtBXqKptnpYgIkVbBrEtE2SOpPbbIYV98Pz0NLogoqkcnqJwKx9Jbh/pub?start=false&loop=false&delayms=30000",
     icon: <PhoneIphoneIcon style={{fontSize: '45px', fill: "black"}}/>,
   },
