@@ -21,7 +21,8 @@
     "framer-motion": "^3.3.0",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
-    "react-use": "^17.1.1"
+    "react-use": "^17.1.1",
+    "use-sound": "^2.0.1"
   },
   "browserslist": {
     "production": [

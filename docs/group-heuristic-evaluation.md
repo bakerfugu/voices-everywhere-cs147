@@ -3,12 +3,49 @@ id: group-heuristic-evaluation
 title: Group Heuristic Evaluation
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac euismod odio, eu consequat dui. Nullam molestie consectetur risus id imperdiet. Proin sodales ornare turpis, non mollis massa ultricies id. Nam at nibh scelerisque, feugiat ante non, dapibus tortor. Vivamus volutpat diam quis tellus elementum bibendum. Praesent semper gravida velit quis aliquam. Etiam in cursus neque. Nam lectus ligula, malesuada et mauris a, bibendum faucibus mi. Phasellus ut interdum felis. Phasellus in odio pulvinar, porttitor urna eget, fringilla lectus. Aliquam sollicitudin est eros. Mauris consectetur quam vitae mauris interdum hendrerit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
-Duis et egestas libero, imperdiet faucibus ipsum. Sed posuere eget urna vel feugiat. Vivamus a arcu sagittis, fermentum urna dapibus, congue lectus. Fusce vulputate porttitor nisl, ac cursus elit volutpat vitae. Nullam vitae ipsum egestas, convallis quam non, porta nibh. Morbi gravida erat nec neque bibendum, eu pellentesque velit posuere. Fusce aliquam erat eu massa eleifend tristique.
+## Overview
 
-Sed consequat sollicitudin ipsum eget tempus. Integer a aliquet velit. In justo nibh, pellentesque non suscipit eget, gravida vel lacus. Donec odio ante, malesuada in massa quis, pharetra tristique ligula. Donec eros est, tristique eget finibus quis, semper non nisl. Vivamus et elit nec enim ornare placerat. Sed posuere odio a elit cursus sagittis.
+We had our Medium-Fi prototype evaluated by several classmates. They described our app as: "Voices, an app that allows users to immerse themselves in a location’s culture by listening to user-uploaded stories about that location, browse stories both local and remote, and record and upload their own stories."
 
-Phasellus feugiat purus eu tortor ultrices finibus. Ut libero nibh, lobortis et libero nec, dapibus posuere eros. Sed sagittis euismod justo at consectetur. Nulla finibus libero placerat, cursus sapien at, eleifend ligula. Vivamus elit nisl, hendrerit ac nibh eu, ultrices tempus dui. Nam tellus neque, commodo non rhoncus eu, gravida in risus. Nullam id iaculis tortor.
+### Heuristic Eval Report
 
-Nullam at odio in sem varius tempor sit amet vel lorem. Etiam eu hendrerit nisl. Fusce nibh mauris, vulputate sit amet ex vitae, congue rhoncus nisl. Sed eget tellus purus. Nullam tempus commodo erat ut tristique. Cras accumsan massa sit amet justo consequat eleifend. Integer scelerisque vitae tellus id consectetur.
+<a
+  target="_blank"
+  href={useBaseUrl("assets/Assignment-9-Voices-Heuristic-Evaluation.pdf")}>
+
+  Full Report PDF
+
+</a>
+
+## Violation Numbers
+
+* **32** total violations
+* **6** violations with severity 4
+* **3** violations with severity 3
+* **15** violations with severity 1-2
+* **8** violations with severity 0
+
+Our most common violations were: Visibility of System Status (**6**), Error Prevention (**6**)
+
+## Summary Recommendations
+
+We received the following general recommendations:
+
+There seems to be a trend we see in our violation descriptions wherein the creators seem to not have
+referenced listening or streaming platforms. The basics such as a listening progress toolbar like Apple
+Music or Spotify etc. might have to show a user’s current listening session, allowing a user to upload a
+narrative instead of assuming they are in quiet place to record, having the recording UI be similar to
+the standards set my Apple’s Voice Memos or cameras on iPhones or Androids (such as circle to
+square indicator change).
+
+There is also a trend wherein the user’s next step is unclear, whether that’s because the status of the
+system is not transparent or the intentions behind navigation elements are unclear. Buttons
+throughout the Record screen, for example, are vaguely labeled, which can lead the user to
+performing actions on their recording that they don’t want. A number of screens also lack a back
+button, so the user has trouble exiting out of unwanted situations.
+
+Strict Recommendations: We found that if the team added a filter feature when viewing the lists of
+narratives, this would be more user friendly. We also thought that some of the interfaces, particularly
+the user profile, had crowded text.

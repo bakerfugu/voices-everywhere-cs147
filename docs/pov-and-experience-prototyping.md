@@ -44,12 +44,19 @@ Ensure that you have to ask a question whenever you have to answer a question
 
 ## Presentation
 
-<a
-  target="_blank"
-  href={useBaseUrl("assets/Assignment-2-Prototyping.pdf")}>
-
-  Presentation PDF
-
-</a>
+<p>
+  {`Download: `}
+  <a
+    target="_blank"
+    href={useBaseUrl("assets/Assignment-2-Prototyping.pdf")}>
+    PDF
+  </a>
+  {` | `}
+  <a
+    target="_blank"
+    href={useBaseUrl("assets/Assignment-2-Prototyping.pptx")}>
+    PPTX
+  </a>
+</p>
 
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSKZ1Y48CPC1z6i__WhkrksVQELiEe74JnfkQgiLajUwP2r4JXUlhMIHHd-aNvEuCpTUiUnxYPXCUG7/embed?start=false&loop=false&delayms=60000" frameborder="0" width="640" height="360" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>

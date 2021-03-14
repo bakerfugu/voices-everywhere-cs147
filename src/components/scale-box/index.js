@@ -7,13 +7,15 @@ export const ScaleBox = ({
   children,
   delayOrder = 0, // order of appearance
   duration = 0.8,
-  easing = [0.42, 0, 0.58, 1] // [number, number, number, number] | "linear" | "easeIn" | "easeOut" | "easeInOut" | "circIn" | "circOut" | "circInOut" | "backIn" | "backOut" | "backInOut" | "anticipate" | EasingFunction;
+  easing = [0.42, 0, 0.58, 1], // [number, number, number, number] | "linear" | "easeIn" | "easeOut" | "easeInOut" | "circIn" | "circOut" | "circInOut" | "backIn" | "backOut" | "backInOut" | "anticipate" | EasingFunction;
+  delayStart = 0.5,
+  ...rest
 }) => {
   const { inView } = useContext(IntersectionContext);
   const transition = useMemo(
     () => ({
       duration,
-      delay: 0.5 + (delayOrder / 5),
+      delay: delayStart + (delayOrder / 5),
       ease: easing
     }),
     [duration, delayOrder, easing]
@@ -38,6 +40,7 @@ export const ScaleBox = ({
       animate={inView ? "show" : "hidden"}
       exit="hidden"
       variants={variants}
+      {...rest}
     >
       {children}
     </motion.div>

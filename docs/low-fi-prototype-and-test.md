@@ -7,13 +7,20 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 ## Presentation
 
-<a
-  target="_blank"
-  href={useBaseUrl("assets/Low-Fi-Protoype-Presentation.pdf")}>
-
-  Presentation PDF
-
-</a>
+<p>
+  {`Download: `}
+  <a
+    target="_blank"
+    href={useBaseUrl("assets/Low-Fi-Protoype-Presentation.pdf")}>
+    PDF
+  </a>
+  {` | `}
+  <a
+    target="_blank"
+    href={useBaseUrl("assets/Assignment-5-Low-Fi-Protoype.pptx")}>
+    PPTX
+  </a>
+</p>
 
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vS4NAJI6osZnsooTJId4jA413wpAUjr4-DZCwFNh63XvdwuxbiXcs0pcRNGgkCehYc737pRbBOLTXtY/embed?start=false&loop=false&delayms=60000" frameborder="0" width="640" height="360" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
@@ -41,10 +48,7 @@ Testing our low-fi prototype provided essential insights into the design and usa
 
 #### Task Flow and User Experience
 
-All six users struggled with navigating between different screens due to the absence of a clearly visible “back” button
-Almost all users were confused as to how to explore stories remotely, citing the terminology of “explore remote stories” as ambiguous
-Many were confused by the “available as” audio and video icons
-Two of the users found the task flow of uploading a story to be confusing, especially given the ways in which the subtasks (entering information about the story, recording the story, and editing the story) were laid out
+All six users struggled with navigating between different screens due to the absence of a clearly visible “back” button. Almost all users were confused as to how to explore stories remotely, citing the terminology of “explore remote stories” as ambiguous. Many were confused by the “available as” audio and video icons. Two of the users found the task flow of uploading a story to be confusing, especially given the ways in which the subtasks (entering information about the story, recording the story, and editing the story) were laid out
 
 #### Design and Concept
 
