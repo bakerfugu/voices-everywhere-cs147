@@ -34,3 +34,10 @@
   height: 200px;
   width: 200px;
 }
+
+.linkRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}

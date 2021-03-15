@@ -142,9 +142,9 @@ const assignmentLinksSecondRow = [
   {
     title: 'Poster & Pitch',
     linkTo: '/docs/poster-and-pitch-slide',
-    contentTitle: 'Presentation:',
-    presentationGoogle: 'Slides',
-    presentationGoogleLink: "",
+    contentTitle: 'Links Coming Soon',
+    // presentationGoogle: 'Slides',
+    // presentationGoogleLink: "",
     icon: <ImportantDevicesIcon style={{fontSize: '45px'}}/>,
   },
 ];

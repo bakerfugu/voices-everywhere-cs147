@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect, forwardRef } from 'react';
+import React, { useState, useRef, useEffect, forwardRef, useContext } from 'react';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useBaseUrl from '@docusaurus/useBaseUrl';
@@ -11,6 +11,7 @@ import {
   AudioButton,
   IntersectionObserver
 } from '../../components'
+import { IntersectionContext } from "../intersection-observer";
 
 import styles from './styles.module.css';
 
@@ -102,10 +103,13 @@ export function StoryOrb({
   oneImage = false,
   ...rest
 }) {
+  const { inView } = useContext(IntersectionContext);
   const [showingStory, setShowingStory] = useState(false);
   const popoverRef = useRef(null);
   useOutsideAlerter(popoverRef, setShowingStory);
   const backgroundOrbSource = oneImage ? imageSource : 'img/orb-yellow-background.png';
+
+  if (!inView) return null;
 
   return (
     <div

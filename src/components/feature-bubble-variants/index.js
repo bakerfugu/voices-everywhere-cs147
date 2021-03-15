@@ -9,7 +9,10 @@ import {
 } from '@material-ui/core';
 import {
   ScaleBox,
-} from '../../components'
+} from '../../components';
+import {
+  LinkRow
+} from './linkRow';
 
 import styles from './styles.module.css';
 
@@ -34,6 +37,7 @@ export function Feature({imageUrl, title, descriptionA, descriptionB, delay, lin
         </div>
     </div>
   )
+  // if (linkTo) console.log('title:', title);
   return (
     <div className={clsx('col col--3', styles.feature)}>
       { delay ?
@@ -52,37 +56,29 @@ export function Feature({imageUrl, title, descriptionA, descriptionB, delay, lin
             </Link>
             {icon}            
           </CardContent>
-          <div style={{display: 'flex', flexDirection: 'row', alignItems:'center', justifyContent:'center'}}>
-            { contentTitle === 'Video:' || contentTitle === 'Report:' ?
-              <Typography variant="subtitle1">
-                {contentTitle} {<a href={presentationGoogleLink} style={{fontWeight:'bold', fontSize: 16}}>{presentationGoogle}</a>} 
-              </Typography>
-            :
-              <Typography variant="subtitle1">
-                {contentTitle} {<a href={presentationGoogleLink} style={{fontWeight:'bold', fontSize: 16}}>{presentationGoogle}</a>} | {<a href={pdfLink} style={{fontWeight:'bold'}}>PDF</a>}
-              </Typography>
-            }
-          </div>
-          <div style={{display: 'flex', flexDirection: 'row', alignItems:'center', justifyContent:'center'}}>
-            { secondRowTitle ?
-              <Typography variant="subtitle1">
-                {secondRowTitle} {<a href={reportLink} style={{fontWeight:'bold', fontSize: 16}}> {secondRowContent} </a>} 
-
-                {readmeLink ?  <span> | <a href={readmeLink} style={{fontWeight:'bold', fontSize: 16}}> {thirdRowContent} </a></span>  : ""}
-              </Typography>
-            :
-              ""
-            }
-          </div>
-          <div style={{display: 'flex', flexDirection: 'row', alignItems:'center', justifyContent:'center'}}>
-            { thirdRowTitle ?
-              <Typography>
-                {thirdRowTitle} {<a href={invisionLink} style={{fontWeight:'bold', fontSize: 16}}>{thirdRowContent}</a>} 
-              </Typography>
-            :
-              ""
-            }
-          </div>
+          <LinkRow
+            firstWord={contentTitle}
+            secondWord={presentationGoogle}
+            secondWordLink={presentationGoogleLink}
+            thirdWord={'PDF'}
+            thirdWordLink={pdfLink}
+          />
+          { secondRowTitle && 
+            <LinkRow
+              firstWord={secondRowTitle}
+              secondWord={secondRowContent}
+              secondWordLink={reportLink}
+              thirdWord={thirdRowContent}
+              thirdWordLink={readmeLink}
+            />
+          }
+          { thirdRowTitle && 
+            <LinkRow
+              firstWord={thirdRowTitle}
+              secondWord={thirdRowContent}
+              secondWordLink={invisionLink}
+            />
+          }
         </div>
       :
         {featureContents}
