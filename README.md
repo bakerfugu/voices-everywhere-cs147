@@ -1,16 +1,19 @@
-# Voices Everywhere
+# Voices
 
-Welcome to the source code for our team, Voices Everywhere, website! Our team is Ayelet Drazen, Baker Sharp, Krishan Nair, and Taylor Lallas.
+![Voices Poster](https://github.com/bakerfugu/voices-everywhere-cs147/raw/main/static/assets/voices-final-poster-image.jpg)
+
+Welcome to the source for the Voices project website! Our team is Ayelet Drazen, Baker Sharp, Krishan Nair, and Taylor Lallas.
 
 ## Our Project
 
-Wite a description of our project here someday.
+> If walls could talk, what could they tell you? What about the plazas, the statues, the fountains and the streets? Take yourself back to a place that was brand new to you, and imagine hearing authentic stories from locals everywhere you go. Presenting voices, where you can hear the culture and memories behind every landmark and street corner. Then, bring personal stories to life by adding your voice to your favorite places.
 
-## CS147
 
-Write a description of CS147 here at some point.
 
-## Team Install and Setup
+<details>
+  <summary>Instrux for Setup and Publishing</summary>
+  
+  ## Team Install and Setup
 
 Start by cloning/downloading this repo.
 
@@ -117,6 +120,8 @@ mv DIRECTORY_NAME/* .
 ```
 
 You should be done now. Check http://web.stanford.edu/class/cs147/projects/ArtsandCulture/Voices/ to see if the changes show up!
+  
+</details>
 
 ## Misc
 
