@@ -83,10 +83,10 @@ Then run this terminal command (replace `bakerfugu` with your github username):
 GIT_USER=bakerfugu DEPLOYMENT_BRANCH=stanford yarn deploy
 ```
 
-That command will take a moment, so while that's happening open another terminal window and login to the myth server (replace `bakers` with your SUNET):
+That command will take a moment, so while that's happening open another terminal window and login to the myth server:
 
 ```console
-ssh bakers@myth.stanford.edu
+ssh YOUR_SUNET@myth.stanford.edu
 ```
 
 Type in your password, then navigate to our team directory on the myth server:
@@ -116,7 +116,7 @@ unzip stanford.zip
 The zip file makes a directory with all the build stuff in it, but we want all of that at the root level of our project folder, so move all the files inside of it one level up:
 
 ```console
-mv DIRECTORY_NAME/* .
+mv voices-everywhere-cs147-stanford/* .
 ```
 
 You should be done now. Check http://web.stanford.edu/class/cs147/projects/ArtsandCulture/Voices/ to see if the changes show up!
