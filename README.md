@@ -1,6 +1,6 @@
 # Voices
 
-![Voices Poster](https://github.com/bakerfugu/voices-everywhere-cs147/raw/main/static/assets/voices-final-poster-image.jpg)
+![Voices Poster](https://github.com/bakerfugu/voices-everywhere-cs147/raw/main/static/assets/voices-pitch-slide-image.jpg)
 
 Welcome to the source for the Voices project website! Our team is Ayelet Drazen, Baker Sharp, Krishan Nair, and Taylor Lallas.
 
