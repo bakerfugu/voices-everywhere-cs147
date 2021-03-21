@@ -39,7 +39,7 @@ We used React Native, Expo, and Apple’s Xcode simulator to bring our high fide
   </a>
 </p>
 
-<video controls src={useBaseUrl("assets/hifiDemoVoices.mp4")} width="640" height="360"/>
+<video controls src={useBaseUrl("assets/hifiDemoVoices.mp4")} width="100%"/>
 
 ### Instructions / README
 

@@ -9,8 +9,8 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
   {`Download: `}
   <a
     target="_blank"
-    href={useBaseUrl("assets/voices-final-poster-image.jpg")}>
-    JPG
+    href={useBaseUrl("assets/voices-poster-image.png")}>
+    PNG
   </a>
   {` | `}
   <a
@@ -20,7 +20,27 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
   </a>
 </p>
 
-![Voices Poster](/assets/voices-final-poster-image.jpg)
+
+![Voices Poster](/assets/voices-poster-image.png)
+
+## Pitch Slide
+
+<p>
+  {`Download: `}
+  <a
+    target="_blank"
+    href={useBaseUrl("assets/voices-pitch-slide-image.jpg")}>
+    JPG
+  </a>
+  {` | `}
+  <a
+    target="_blank"
+    href={useBaseUrl("assets/voices-pitch-slide.pdf")}>
+    PDF
+  </a>
+</p>
+
+![Voices Pitch Slide](/assets/voices-pitch-slide-image.jpg)
 
 ## 30 Second Pitch
 
