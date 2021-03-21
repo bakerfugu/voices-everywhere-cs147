@@ -7,7 +7,7 @@ module.exports = {
     'low-fi-prototype-and-test',
     'medium-fi-prototype',
     'group-heuristic-evaluation',
-    'high-fidelity-prototype',
     'poster-and-pitch-slide',
+    'final-prototype',
   ],
 };
