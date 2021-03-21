@@ -139,7 +139,7 @@ const assignmentLinksSecondRow = [
   },
   {
     title: 'Final Prototype',
-    linkTo: '/docs/high-fidelity-prototype',
+    linkTo: '/docs/final-prototype',
     contentTitle: 'Presentation:',
     presentationGoogle: 'Slides',
     presentationGoogleLink: 'assets/Assignment-8-Hi-Fi-Prototype.pptx', 
