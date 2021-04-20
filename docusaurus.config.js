@@ -8,6 +8,12 @@ module.exports = {
   // Url options to deploy to stanford myth server
   // url: 'http://web.stanford.edu',
   // baseUrl: '/class/cs147/projects/ArtsandCulture/Voices/',
+
+  // For the archive
+  // https://hci.stanford.edu/courses/cs147/2021/wi/projects/ArtsandCulture/Voices/
+  // url: 'https://hci.stanford.edu',
+  // baseUrl: '/courses/cs147/2021/wi/projects/ArtsandCulture/Voices/',
+
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.svg',
