@@ -33,7 +33,7 @@
 
 **voices** is a React Native app designed to help people connect to the stories behind a location. Users can record themselves telling a story about their favorite places, and other users can learn about a new place by listening to those stories.
 
-**voices** is a group project made for Stanford's CS147 course, and this repo holds the source code for our [project website.](https://bakerfugu.github.io/voices-everywhere-cs147/) My group was Baker Sharp (me), Krishnan Nair, Ayelet Drazen, and Taylor Lallas
+**voices** is a group project made for Stanford's CS147 course, and this repo holds the source code for our **project website.** My group was Baker Sharp (me), Krishnan Nair, Ayelet Drazen, and Taylor Lallas
 
 [Check out the site here!](https://bakerfugu.github.io/voices-everywhere-cs147/)
 
