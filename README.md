@@ -29,15 +29,20 @@
   <img alt="Screenshots of project website homepage" src="https://github.com/bakerfugu/voices-everywhere-cs147/assets/7607483/86431d30-edd0-4a08-a847-1a97bd4b6efd" width="80%" />
 </p>
 
+<a href="https://bakerfugu.github.io/voices-everywhere-cs147/" target="_blank">
+  <p align="center">
+    Check out the site here!
+  </p>
+</a>
+<br/>
+
 ## Voices (Project Website)
 
 **voices** is a React Native app designed to help people connect to the stories behind a location. Users can record themselves telling a story about their favorite places, and other users can learn about a new place by listening to those stories.
 
-**voices** is a group project made for Stanford's CS147 course, and this repo holds the source code for our **project website.** My group was Baker Sharp (me), Krishnan Nair, Ayelet Drazen, and Taylor Lallas
+**voices** is a group project made for Stanford's CS147 course, and this repo holds the source code for [our project website.](https://bakerfugu.github.io/voices-everywhere-cs147) My group was Baker Sharp (me), Krishnan Nair, Ayelet Drazen, and Taylor Lallas
 
-[Check out the site here!](https://bakerfugu.github.io/voices-everywhere-cs147/)
-
-Also, check out the [source code for our React Native app!](https://github.com/bakerfugu/voices-native-app/tree/master)
+*Also, check out the [source code and demo video](https://github.com/bakerfugu/voices-native-app/tree/master) for our React Native app.*
 
 ## Instrux for Setup and Publishing
 
