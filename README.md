@@ -1,17 +1,48 @@
-# Voices
+<p align="center">
+  <a href="https://bakerfugu.github.io/voices-everywhere-cs147/" target="_blank">
+    <picture>
+      <!-- This changes the image if the user is using light or dark theme. Very snazzy -->
+      <source media="(prefers-color-scheme: dark)" srcset="https://github.com/bakerfugu/voices-native-app/assets/7607483/657cc0df-6e56-4837-9ca5-88068fb1e8c4">
+      <img alt="Voices logo image with blue orb" src="https://github.com/bakerfugu/voices-native-app/assets/7607483/30f6917c-54a2-4967-89dc-56a254dd2a42">
+    </picture>
+  </a>
+</p>
 
-![Voices Poster](https://github.com/bakerfugu/voices-everywhere-cs147/raw/main/static/assets/voices-pitch-slide-image.jpg)
+<h3 align="center">
+  <!-- This is a centered header -->
+  cultural immersion by discovering personal stories
+</h3>
 
-Welcome to the source for the Voices project website! Our team is Ayelet Drazen, Baker Sharp, Krishan Nair, and Taylor Lallas.
+<br/>
 
-## Our Project
+***"If walls could talk, what could they tell you?"***  
+*"What about the plazas, the statues, the fountains and the streets? Take yourself back to a place that was brand new to you, and imagine hearing authentic stories from locals everywhere you go. Presenting* ***voices,*** *where you can hear the culture and memories behind every landmark and street corner. Then, bring personal stories to life by adding your voice to your favorite places."*
 
-> If walls could talk, what could they tell you? What about the plazas, the statues, the fountains and the streets? Take yourself back to a place that was brand new to you, and imagine hearing authentic stories from locals everywhere you go. Presenting voices, where you can hear the culture and memories behind every landmark and street corner. Then, bring personal stories to life by adding your voice to your favorite places.
+<br/>
+
+<!-- The easiest way to add images is to copy them to your clipboard and paste them into the file  -->
+<!-- Github will automatically upload your image and add the markdown syntax with the image URL  -->
+<!-- I quickly add images by right-clicking in Figma, and clicking "Copy/Paste as" >> "Copy as PNG"  -->
+
+<p align="center" >
+  <!-- The p tag centers the image, and wdith="60%" resizes it apropriately -->
+  <img alt="Screenshots of project website homepage" src="https://github.com/bakerfugu/voices-everywhere-cs147/assets/7607483/86431d30-edd0-4a08-a847-1a97bd4b6efd" width="80%" />
+</p>
+
+## Voices (Project Website)
+
+**voices** is a React Native app designed to help people connect to the stories behind a location. Users can record themselves telling a story about their favorite places, and other users can learn about a new place by listening to those stories.
+
+**voices** is a group project made for Stanford's CS147 course, and this repo holds the source code for our [project website.](https://bakerfugu.github.io/voices-everywhere-cs147/) My group was Baker Sharp (me), Krishnan Nair, Ayelet Drazen, and Taylor Lallas
 
 [Check out the site here!](https://bakerfugu.github.io/voices-everywhere-cs147/)
 
+Also, check out the [source code for our React Native app!](https://github.com/bakerfugu/voices-native-app/tree/master)
+
+## Instrux for Setup and Publishing
+
 <details>
-  <summary>Instrux for Setup and Publishing</summary>
+  <summary>Open Me! Instructions Inside</summary>
   
   ## Team Install and Setup
 
@@ -23,7 +54,7 @@ This project uses `yarn` as a package manager (it's basically the same thing as 
 yarn --version
 ```
 
-*If this says anything other than `1.22.5`, ask me about it. This is unlikely to be a problem, but I think it's the most likely thing to go wrong while setting this up assuming y'all have git working.*
+*If this says anything other than `1.22.XX`, ask me about it. This is unlikely to be a problem, but I think it's the most likely thing to go wrong while setting this up assuming y'all have git working.*
 
 Next, install all the packages needed to run the website using this command:
 
@@ -123,8 +154,12 @@ You should be done now. Check http://web.stanford.edu/class/cs147/projects/Artsa
   
 </details>
 
+<br/>
+
+<br/>
+
 ## Misc
 
-This website is a portion of the final group project for Stanford's CS147 Introduction to Human-Computer Interaction Design course.
+This website is part of the final group project for Stanford's CS147 Introduction to Human-Computer Interaction Design course. 
 
 This website is built using [Docusaurus 2](https://v2.docusaurus.io/), a modern static website generator.
