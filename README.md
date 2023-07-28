@@ -23,11 +23,13 @@
 <!-- The easiest way to add images is to copy them to your clipboard and paste them into the file  -->
 <!-- Github will automatically upload your image and add the markdown syntax with the image URL  -->
 <!-- I quickly add images by right-clicking in Figma, and clicking "Copy/Paste as" >> "Copy as PNG"  -->
+<a href="https://bakerfugu.github.io/voices-everywhere-cs147/" target="_blank">
+  <p align="center" >
+    <!-- The p tag centers the image, and wdith="60%" resizes it apropriately -->
+    <img alt="Screenshots of project website homepage" src="https://github.com/bakerfugu/voices-everywhere-cs147/assets/7607483/86431d30-edd0-4a08-a847-1a97bd4b6efd" width="80%" />
+  </p>
+</a>
 
-<p align="center" >
-  <!-- The p tag centers the image, and wdith="60%" resizes it apropriately -->
-  <img alt="Screenshots of project website homepage" src="https://github.com/bakerfugu/voices-everywhere-cs147/assets/7607483/86431d30-edd0-4a08-a847-1a97bd4b6efd" width="80%" />
-</p>
 
 <a href="https://bakerfugu.github.io/voices-everywhere-cs147/" target="_blank">
   <p align="center">
